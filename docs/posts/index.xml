@@ -2,22 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My New Hugo Site</title>
-    <link>http://example.org/posts/</link>
+    <link>http://noobcoderr.github.io/posts/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Aug 2019 00:34:58 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2019 00:50:49 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://noobcoderr.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Fst Post</title>
-      <link>http://example.org/posts/fst-post/</link>
+      <title>使用Hugo &#43; Github Page构建自己的个人博客</title>
+      <link>http://noobcoderr.github.io/posts/snd/</link>
+      <pubDate>Fri, 23 Aug 2019 00:50:49 +0800</pubDate>
+      
+      <guid>http://noobcoderr.github.io/posts/snd/</guid>
+      <description>使用Hugo + Github Page构建自己的个人博客  安装hugo  macos: brew install hugo
+windows: 源码安装后记得将可执行文件加如到环境变量中
+ 使用hugo创建网站  hugo new site blog
+ 生成文章  hugo new posts/first-post.md
+ 加载主题  git init
+git submodule 主题git themes/主题名
+ 修改配置文件
+echo &#39;theme = &amp;quot;主题名&amp;quot;&#39; &amp;gt;&amp;gt; config.toml  本地构建
+  hugo server
+即可在http:127.0.0.1:1313/ 查看到构建后的页面了
+ 构建页面  hugo
+即可将网页生成到默认的public子目录里。当然你可以指定一个别的文件夹
+echo &#39;publishDir = &amp;quot;docs&amp;quot;&#39; &amp;gt;&amp;gt; config.toml  即以后生成的网页静态文件都到docs子目录下了。
+ 发布到github.io  将生成在docs下的网页文件推送到 yourname.github.io库下，稍等一会儿你就可以看到你生成的网页了。</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>http://noobcoderr.github.io/posts/fst-post/</link>
       <pubDate>Thu, 22 Aug 2019 00:34:58 +0800</pubDate>
       
-      <guid>http://example.org/posts/fst-post/</guid>
-      <description> Hello World </description>
+      <guid>http://noobcoderr.github.io/posts/fst-post/</guid>
+      <description>Hello World 欢迎 Golang相关 面向信仰编程 Golang 博客有深度，很多都是从源码讲起，需要一定的基础
+飞雪无情的博客 Golang 比较基础，知识点循序渐进，适合初级go程序员看
+敬维 DevOps Golang 容器
+Tony Bai Go程序员
+个人随笔 notes 杂记杂记&amp;hellip;持续更新ing</description>
     </item>
     
   </channel>

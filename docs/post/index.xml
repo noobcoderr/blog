@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jzhang Blog</title>
-    <link>http://noobcoderr.github.io/</link>
-    <description>Recent content on Jzhang Blog</description>
+    <title>Posts on Jzhang Blog</title>
+    <link>http://noobcoderr.github.io/post/</link>
+    <description>Recent content in Posts on Jzhang Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 25 Aug 2019 23:57:16 +0800</lastBuildDate>
     
-	<atom:link href="http://noobcoderr.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://noobcoderr.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
