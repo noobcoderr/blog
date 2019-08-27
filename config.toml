@@ -19,7 +19,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/home-bg-jeep.jpg"
-  SEOTitle = "Jzhang的博客 | Jzhang Blog"
+  SEOTitle = "Jzhang Blog | Jzhang Blog"
   description = "Python,Golang"
   keyword = ", 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice"
   slogan = ""
@@ -51,6 +51,23 @@ home = ["HTML", "RSS", "Algolia"]
   
   # We need a proxy to access Disqus api in China
   # Follow https://github.com/zhaohuabing/disqus-php-api to set up your own disqus proxy
+  enableGitalk = true
+
+  [params.gitalk]
+  clientID = "c279f5088459d987985f"
+  clientSecret = "28f3f1c9515060bedff017a9bdd42ec2d3b4054c"
+  repo = "noobcoderr.github.io"
+  owner = "noobcoderr"
+  admin = "noobcoderr"
+  id = "location.pathname"
+  labels= "gitalk" # Github issue labels. If you used to use Gitment, you can change it
+  perPage= 15 # Pagination size, with maximum 100.
+  pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
+  createIssueManually= false # If it is 'false', it is auto to make a Github issue when the administrators login.
+  distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
+
+
+
   disqus_proxy = ""
   disqus_site = ""
 
