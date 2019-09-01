@@ -17,7 +17,7 @@ script:
   - hugo
 after_script:
   # 部署
-  - cd ./docs
+  - cd ./public
   - git init
   - git config user.name "noobcoderr"
   - git config user.email "jzhang1529@163.com"
@@ -30,7 +30,7 @@ after_script:
 env:
  global:
    # Github Pages
-   - GH_REF: github.com/noobcoderr/noobcoderr.github.io.git
+   - GH_REF: git@github.com:noobcoderr/noobcoderr.github.io.git
 deploy:
   #token ebab619608a504d851651bc31ceca84d3d4e72c6
   provider: pages # 重要，指定这是一份github pages的部署配置
