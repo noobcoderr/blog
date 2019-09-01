@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on NoobCoder</title>
+    <link>http://noobcoderr.github.io/categories/tech/</link>
+    <description>Recent content in Tech on NoobCoder</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noobcoderr.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Example Post</title>
+      <link>http://noobcoderr.github.io/post/test_travis_ci/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://noobcoderr.github.io/post/test_travis_ci/</guid>
+      <description>这是travis-ci测试文章2 遇到的几个坑 1、 global: ​ Github Pages ​ GH_REF: github.com/noobcoderr/noobcoderr.github.io.git ​ GH_REF 后的链接加了个https，导致ci时没有access 2、 travis ci `mkdir&amp;rsquo;: File exists @ dir_s_mkdir - /tmp/d20190901-4695-w65n55/work</description>
+    </item>
+    
+  </channel>
+</rss>
