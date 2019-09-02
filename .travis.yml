@@ -11,7 +11,7 @@ install:
   - wget https://github.com/gohugoio/hugo/releases/download/v0.57.2/hugo_0.57.2_Linux-64bit.deb
   - sudo dpkg -i hugo*.deb
   # 安装主题
-  - git clone https://github.com/zhaohuabing/hugo-theme-cleanwhite-m.git
+  - git clone https://github.com/noobcoderr/hugo-theme-cleanwhite-m.git
 script:
   # 运行hugo命令
   - hugo
