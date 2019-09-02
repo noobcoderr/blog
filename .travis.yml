@@ -11,19 +11,16 @@ install:
   - wget https://github.com/gohugoio/hugo/releases/download/v0.57.2/hugo_0.57.2_Linux-64bit.deb
   - sudo dpkg -i hugo*.deb
   # 安装主题
-  - git clone https://github.com/noobcoderr/hugo-theme-cleanwhite-m.git
+  - git clone https://github.com/zhaohuabing/hugo-theme-cleanwhite.git
 script:
   # 运行hugo命令
   - hugo
 after_script:
   # 部署
-  - cd ./public
+  - cd ./docs
   - git init
   - git config user.name "noobcoderr"
   - git config user.email "jzhang1529@163.com"
-  #- git remote add origin https://github.com/noobcoderr/noobcoderr.github.io.git
-  #- git config --global --unset http.proxy
-  #- git config --global --unset https.proxy
   - git add .
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
@@ -35,10 +32,9 @@ env:
    # Github Pages
    - GH_REF: github.com/noobcoderr/noobcoderr.github.io.git
 deploy:
-  #token ebab619608a504d851651bc31ceca84d3d4e72c6
   provider: pages # 重要，指定这是一份github pages的部署配置
   skip-cleanup: true # 重要，不能省略
-  local-dir: public # 静态站点文件所在目录
+  local-dir: docs # 静态站点文件所在目录
   target-branch: master # 要将静态站点文件发布到哪个分支
   github-token: $GITHUB_TOKEN # 重要，$GITHUB_TOKEN是变量，需要在GitHub上申请、再到配置到Travis
   # fqdn:  # 如果是自定义域名，此处要填
