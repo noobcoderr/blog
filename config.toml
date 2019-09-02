@@ -1,7 +1,7 @@
 baseURL = "http://noobcoderr.github.io/"
 languageCode = "zh-cn"
 theme = "hugo-theme-cleanwhite"
-#publishDir = "docs"
+publishDir = "docs"
 baseurl = "https://github.com/noobcoderr"
 title = "NoobCoder"
 googleAnalytics = "UA-146689682-1"

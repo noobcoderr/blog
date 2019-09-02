@@ -17,7 +17,7 @@ script:
   - hugo
 after_script:
   # 部署
-  - cd ./public
+  - cd ./docs
   - git init
   - git config user.name "noobcoderr"
   - git config user.email "jzhang1529@163.com"
@@ -34,7 +34,7 @@ env:
 deploy:
   provider: pages # 重要，指定这是一份github pages的部署配置
   skip-cleanup: true # 重要，不能省略
-  local-dir: public # 静态站点文件所在目录
+  local-dir: docs # 静态站点文件所在目录
   target-branch: master # 要将静态站点文件发布到哪个分支
   github-token: $GITHUB_TOKEN # 重要，$GITHUB_TOKEN是变量，需要在GitHub上申请、再到配置到Travis
   # fqdn:  # 如果是自定义域名，此处要填
