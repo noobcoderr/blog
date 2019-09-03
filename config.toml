@@ -1,10 +1,12 @@
 baseURL = "http://noobcoderr.github.io/"
-languageCode = "zh-cn"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh-CN"
 theme = "hugo-theme-cleanwhite-m"
 publishDir = "docs"
 baseurl = "https://github.com/noobcoderr"
 title = "NoobCoder"
 googleAnalytics = "UA-146689682-1"
+# 保持分类的原始名字（false会做转小写处理）
 preserveTaxonomyNames = true
 paginate = 5  # 每页的文章数
 hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
@@ -23,7 +25,7 @@ home = ["HTML", "RSS", "Algolia"]
   title_404 = "你来到了没有知识的荒原 :("
 
   #是否顯示toc
-  #showToc = "false"
+  showToc = false
 
   # leancloud storage for page view counter
   page_view_conter = false 
@@ -41,7 +43,8 @@ home = ["HTML", "RSS", "Algolia"]
   sidebar_avatar = "img/jzhang.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true 
-  featured_condition_size = 1 
+#对标签数量进行限制的参数，填0则代表将所有文章标签都展示
+  featured_condition_size = 0 
 
   # Baidu Analytics
   ba_track_id = ""
@@ -103,17 +106,17 @@ home = ["HTML", "RSS", "Algolia"]
   #href =  "https://zhaozhihan.com"
 
   [[params.bookmark_link]]
-  title =  "Martin Fowler"
-  href =  "https://martinfowler.com"
+  title =  "Simple Go Principle"
+  href =  "https://draveness.me/golang/"
   [[params.bookmark_link]]
-  title = "ServiceMesher"
-  href =  "http://www.servicemesher.com"
-  [[params.bookmark_link]]
-  title =  "Pxhere"
-  href = "https://pxhere.com"
-  [[params.bookmark_link]]
-  title = "unsplash"
-  href = "https://unsplash.com"
+  title = "hugo-handbook"
+  href =  "https://jimmysong.io/hugo-handbook/"
+  #[[params.bookmark_link]]
+ # title =  "Pxhere"
+  #href = "https://pxhere.com"
+  #[[params.bookmark_link]]
+ #title = "unsplash"
+ # href = "https://unsplash.com"
   
   [[params.addtional_menus]]
   title =  "BOOKS"

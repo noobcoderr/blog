@@ -165,3 +165,15 @@ categories:  ["Tech" ]
 以上方法是得写好文章，然后将构建好的静态文件更新到github.io库下，即每次都得构建一次，是不是可以有一种，只用将文章写好后，推送到github.io上即可自动化构建然后推送呢？持续交付？
 
 已完成。
+
+
+
+优秀的Hugo建站博文
+
+[静态网站构建手册-使用Hugo构建个人博客](https://jimmysong.io/hugo-handbook/)
+
+[Hugo 从入门到会用](https://blog.olowolo.com/post/hugo-quick-start/)
+
+[Hugo 使用问题集](https://www.qd1024.com/post/hugo/)
+
+[从Hexo迁移到Hugo-送漂亮的Hugo Theme主题](https://www.flysnow.org/2018/07/29/from-hexo-to-hugo.html)
