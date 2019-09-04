@@ -1,17 +1,17 @@
 ---
-title:       "An Example Post"
+title:       "hugo博客使用持续集成工具travis-ci"
 subtitle:    ""
 description: ""
-date:        2018-06-04
-author:      "noobcoderr"
+date:        2019-09-04
+author:      "NoobCoder"
 image:       ""
-tags:        ["tag1", "tag2"]
+tags:        ["travis", "hugo","CI"]
 categories:  ["Tech" ]
 ---
 
 
 
-## 这是travis-ci测试文章2
+## hugo博客使用持续集成工具travis-ci
 
 遇到的几个坑
 
