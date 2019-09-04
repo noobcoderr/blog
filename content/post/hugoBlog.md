@@ -12,7 +12,7 @@ categories:  ["Tech" ]
 
 ## 使用Hugo + Github Page构建自己的个人博客
 
-##前言
+## 前言
 
 个人博客折腾历程
 
@@ -21,7 +21,7 @@ categories:  ["Tech" ]
 3. 工作后没多少时间再去实现博客的整个前后端了，于是把目光瞄准了github page，虽然一开始以为是静态的不能交互，后来搞着搞着发现有gitalk等插件，可以通过issue等来进行评论交互，于是通通都搞上。就有了现在的博客。
 4. 现在就专注记录学习了。
 
-##开始
+## 开始
 
 1. 安装hugo
 
@@ -42,6 +42,8 @@ categories:  ["Tech" ]
    > ├── static # 包含 CSS、JavaScript、Fonts、media 等，决定网站的外观。选择主题后会将主题中的 `static` 文件夹中的内容复制到此文件夹中
    > ├── themes # 存放主题文件,可以放多主题，最后在config.toml里进行配置
    > └── config.toml # 网站的配置文件
+
+   
 
 3. 生成文章
 

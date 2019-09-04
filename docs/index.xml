@@ -5,11 +5,20 @@
     <link>http://noobcoderr.github.io/</link>
     <description>Recent content on NoobCoder</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sun, 25 Aug 2019 23:57:16 +0800</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noobcoderr.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>An Example Post</title>
+      <link>http://noobcoderr.github.io/post/test5/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://noobcoderr.github.io/post/test5/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Clasiccase</title>
@@ -18,15 +27,6 @@
       
       <guid>http://noobcoderr.github.io/post/clasiccase/</guid>
       <description>经典案例解析 为什么程序员的业余项目都死了？ 我先说说我自己的吧，大学时也是有过好几个idea的，并且有一个拿来参加了全国大学生创新创业大赛，但</description>
-    </item>
-    
-    <item>
-      <title>使用Hugo &#43; Github Page构建自己的个人博客</title>
-      <link>http://noobcoderr.github.io/post/snd/</link>
-      <pubDate>Fri, 23 Aug 2019 00:50:49 +0800</pubDate>
-      
-      <guid>http://noobcoderr.github.io/post/snd/</guid>
-      <description>使用Hugo + Github Page构建自己的个人博客 安装hugo macos: brew install hugo windows: 源码安装后记得将可执行文件加如到环境变量中 使用hugo创建网站 hugo new site blog 生成文</description>
     </item>
     
     <item>
@@ -45,6 +45,15 @@
       
       <guid>http://noobcoderr.github.io/post/test_travis_ci/</guid>
       <description>这是travis-ci测试文章2 遇到的几个坑 1、 global: ​ Github Pages ​ GH_REF: github.com/noobcoderr/noobcoderr.github.io.git ​ GH_REF 后的链接加了个https，导致ci时没有access 2、 travis ci `mkdir&amp;rsquo;: File exists @ dir_s_mkdir - /tmp/d20190901-4695-w65n55/work</description>
+    </item>
+    
+    <item>
+      <title>使用Hugo &#43; Github Page构建自己的个人博客</title>
+      <link>http://noobcoderr.github.io/post/hugoblog/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://noobcoderr.github.io/post/hugoblog/</guid>
+      <description>使用Hugo + Github Page构建自己的个人博客 前言 个人博客折腾历程 开始自学编程，意识到要用博客记录一些自己的学习笔记、遇到的问题、以及解决办法等</description>
     </item>
     
   </channel>

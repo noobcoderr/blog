@@ -34,9 +34,9 @@ home = ["HTML", "RSS", "Algolia"]
 
   # algolia site search
   algolia_search = true
-  algolia_appId = ""
-  algolia_indexName = ""
-  algolia_apiKey = ""
+  algolia_appId = "JEYBIQHH8R"
+  algolia_indexName = "jzhang_hugo_blog"
+  algolia_apiKey = "df0c7341df11cde0c48deb32fd150ed2"
 
   # Sidebar settings
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
@@ -133,6 +133,6 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params.algolia]
  vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
- params = ["categories", "tags"] 
+ params = ["categories", "tags","series"] 
 
 

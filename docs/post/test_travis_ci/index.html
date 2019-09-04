@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,6 +78,8 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146689682-1"></script>
+
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -118,7 +122,7 @@
                     </li>
                     
                     
-		    
+		            
                         <li><a href="/top/books/">BOOKS</a></li>
                     
                         <li><a href="/top/about/">ABOUT</a></li>
@@ -126,7 +130,9 @@
 
                     
 		    <li>
-                        <a href="/search">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search"></a>
+                        <a href="/search/">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search">
+                        
+                        </a>
 		    </li>
                     
                 </ul>
@@ -222,18 +228,6 @@
                 post-container">
 
                 
-                <header>
-                    <h2>TOC</h2>
-                </header>
-                <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#这是travis-ci测试文章2">这是travis-ci测试文章2</a></li>
-</ul></li>
-</ul>
-</nav>
-                
                 
 
 <h2 id="这是travis-ci测试文章2">这是travis-ci测试文章2</h2>
@@ -257,7 +251,9 @@
 
 <p>3、CI显示没出错，部署成功，但是github.io库里根本每显示更新了文件，blog库也没更新。</p>
 
-<p>​   暂无解决</p>
+<p>​   暂无解决，应该是之前设置了生成到docs，但是默认的又是生成到public文件夹下。</p>
+
+<p>​   是ci时，没有用户名密码，无法获取github.io库的commit、push权限，所以不成功</p>
 
 <p>疑问：</p>
 
@@ -266,6 +262,8 @@
 <p>参考文章：</p>
 
 <p><a href="https://mogeko.me/2018/028/">使用 Travis CI 自动部署 Hugo 博客</a></p>
+
+<p><a href="https://github.com/chenwangji/blog/issues/1">第一个坑</a></p>
 
 
                 
@@ -312,6 +310,11 @@
 
                 <hr>
                 <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/hugoblog/" data-toggle="tooltip" data-placement="top" title="使用Hugo &#43; Github Page构建自己的个人博客">&larr;
+                            Previous Post</a>
+                    </li>
                     
                     
                     <li class="next">
@@ -363,7 +366,27 @@
                         
                         
                         
+                        <a href="/tags/github-page" title="github-page">
+                            github-page
+                        </a>
                         
+                        
+                        
+                        <a href="/tags/hugo" title="hugo">
+                            hugo
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
                         
                         
                     </div>
