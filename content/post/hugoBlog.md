@@ -6,11 +6,11 @@ description: ""
 date:        2018-06-04
 author:      "NoobCoder"
 image:       ""
-tags:        ["hugo", "github page"]
+tags:        ["hugo blog", "github page"]
 categories:  ["Tech" ]
 ---
 
-## 使用Hugo + Github Page构建自己的个人博客
+# 使用Hugo + Github Page构建自己的个人博客
 
 ## 前言
 
@@ -23,142 +23,174 @@ categories:  ["Tech" ]
 
 ## 开始
 
-1. 安装hugo
+### 安装hugo
 
-   macos: brew install hugo
+macos: ` brew install hugo`
 
-   windows: 源码安装后记得将可执行文件加如到环境变量中
+windows: 源码安装后记得将可执行文件加如到环境变量中
 
-2. 使用hugo创建网站
+### 使用hugo创建网站
 
-   hugo new site blog
+`hugo new site blog`
 
-   完成后会生成文件目录格式为
+完成后会生成文件目录格式为
 
-   > ├── archetypes # 内容类型，在创建新内容时自动生成内容的配置
-   > ├── content # 网站文章内容，Markdown 文件
-   > ├── data
-   > ├── layouts # 网站模版，选择主题后会将主题中的 `layouts` 文件夹中的内容复制到此文件夹中
-   > ├── static # 包含 CSS、JavaScript、Fonts、media 等，决定网站的外观。选择主题后会将主题中的 `static` 文件夹中的内容复制到此文件夹中
-   > ├── themes # 存放主题文件,可以放多主题，最后在config.toml里进行配置
-   > └── config.toml # 网站的配置文件
+> ├── archetypes # 内容类型，在创建新内容时自动生成内容的配置
+> ├── content # 网站文章内容，Markdown 文件
+> ├── data
+> ├── layouts # 网站模版，选择主题后会将主题中的 `layouts` 文件夹中的内容复制到此文件夹中
+> ├── static # 包含 CSS、JavaScript、Fonts、media 等，决定网站的外观。选择主题后会将主题中的 `static` 文件夹中的内容复制到此文件夹中
+> ├── themes # 存放主题文件,可以放多主题，最后在config.toml里进行配置
+> └── config.toml # 网站的配置文件
 
-   
 
-3. 生成文章
 
-   hugo new post/first-post.md
+### 生成文章
 
-   这个操作需要在该博客的根目录blog下操作，完成后会在content目录下生成post/first-post.md文件
+`hugo new post/first-post.md`
 
-   生成的md文件会携带一些信息
+这个操作需要在该博客的根目录blog下操作，完成后会在content目录下生成post/first-post.md文件
 
-   ```go
-   ---
-   title: "first-post"
-   date: 2019-09-03T20:56:47+08:00
-   draft: true
-   ---
-   ```
+生成的md文件会携带一些信息
 
-   `draft:true` 代表该篇文章为草稿。
+```go
+---
+title: "first-post"
+date: 2019-09-03T20:56:47+08:00
+draft: true
+---
+```
 
-   以上信息为自动生成，可以自己添加参数
+`draft:true` 代表该篇文章为草稿。
 
-   ```go
-   title: "使用Hugo + Github Page构建自己的个人博客"
-   date: 2019-08-23T00:50:49+08:00
-   subtitle:    ""
-   description: ""
-   date:        2019-09-03T20:56:47+08:00
-   author:      "NoobCoder"
-   image:       ""
-   tags:        ["hugo", "github page"]
-   categories:  ["Tech" ]
-   ```
+以上信息为自动生成，可以自己添加参数
 
-4. 加载主题
+```go
+title: "使用Hugo + Github Page构建自己的个人博客"
+date: 2019-08-23T00:50:49+08:00
+subtitle:    ""
+description: ""
+date:        2019-09-03T20:56:47+08:00
+author:      "NoobCoder"
+image:       ""
+tags:        ["hugo", "github page"]
+categories:  ["Tech" ]
+```
 
-   `git init `
+### 加载主题
 
-   `git submodule 主题git themes/主题名`
+`git init `
 
-   由于主题也是git库，所以需要添加为子模块的形式
+`git submodule 主题git themes/主题名`
 
-5. 修改配置文件 `config.toml`
+由于主题也是git库，所以需要添加为子模块的形式
 
-   ```shell
-   baseURL = "https://noobcoderr.github.io" # 博客地址
-   title = "NoobCoder Blog" # 浏览器的标题
-   languageCode = "zh-cn" # 语言
-   hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
-   theme = "" # 主题名 (需要自己下载)
-   paginate = 10 # 每页的文章数
-   enableEmoji = true # 支持 Emoji
-   enableRobotsTXT = true # 支持 robots.txt
-   googleAnalytics = "" # Google 统计 id
-   preserveTaxonomyNames = true
-   
-   [params]
-       since = 2017
-       author = "NoobCoder"                          # Author's name
-       avatar = "/images/me/avatar.png"           # Author's avatar
-       subtitle = "Just for Fun"                  # Subtitle
-       cdn_url = ""           # Base CDN URL
-       home_mode = "" # post or other
-       enableGitalk = true # gitalk 评论系统
-       google_verification = ""
-       description = "" # (Meta) 描述
-       keywords = "" # site keywords
-       beian = ""
-       baiduAnalytics = ""
-       license= '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
-   [params.social]
-       GitHub = "xxoo"
-       Twitter = "xxoo"
-       Email   = "xxoo"
-       Instagram = "xxoo"
-       Wechat = "/images/me/wechat.png"  # Wechat QRcode image
-       Facebook = "xxoo"
-       Telegram = "xxoo"
-       Dribbble = "xxoo"
-       Medium = "xxoo"
-   [params.gitalk] # Github: https://github.com/gitalk/gitalk
-       clientID = "" # Your client ID
-       clientSecret = "" # Your client secret
-       repo = "" # The repo to store comments
-       owner = "" # Your GitHub ID
-       admin= "" # Required. Github repository owner and collaborators. (Users who having write access to this repository)
-       id= "location.pathname" # The unique id of the page.
-       labels= "gitalk" # Github issue labels. If you used to use Gitment, you can change it
-       perPage= 15 # Pagination size, with maximum 100.
-       pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
-       createIssueManually= false # If it is 'false', it is auto to make a Github issue when the administrators login.
-       distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
-   
-   ```
+### 修改配置文件 `config.toml`
 
-6. 本地构建
+```shell
+baseURL = "https://noobcoderr.github.io" # 博客地址
+title = "NoobCoder Blog" # 浏览器的标题
+languageCode = "zh-cn" # 语言
+hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
+theme = "" # 主题名 (需要自己下载)
+paginate = 10 # 每页的文章数
+enableEmoji = true # 支持 Emoji
+enableRobotsTXT = true # 支持 robots.txt
+googleAnalytics = "" # Google 统计 id
+preserveTaxonomyNames = true
 
-   hugo server
+[params]
+    since = 2017
+    author = "NoobCoder"                          # Author's name
+    avatar = "/images/me/avatar.png"           # Author's avatar
+    subtitle = "Just for Fun"                  # Subtitle
+    cdn_url = ""           # Base CDN URL
+    home_mode = "" # post or other
+    enableGitalk = true # gitalk 评论系统
+    google_verification = ""
+    description = "" # (Meta) 描述
+    keywords = "" # site keywords
+    beian = ""
+    baiduAnalytics = ""
+    license= '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
+[params.social]
+    GitHub = "xxoo"
+    Twitter = "xxoo"
+    Email   = "xxoo"
+    Instagram = "xxoo"
+    Wechat = "/images/me/wechat.png"  # Wechat QRcode image
+    Facebook = "xxoo"
+    Telegram = "xxoo"
+    Dribbble = "xxoo"
+    Medium = "xxoo"
+[params.gitalk] # Github: https://github.com/gitalk/gitalk
+    clientID = "" # Your client ID
+    clientSecret = "" # Your client secret
+    repo = "" # The repo to store comments
+    owner = "" # Your GitHub ID
+    admin= "" # Required. Github repository owner and collaborators. (Users who having write access to this repository)
+    id= "location.pathname" # The unique id of the page.
+    labels= "gitalk" # Github issue labels. If you used to use Gitment, you can change it
+    perPage= 15 # Pagination size, with maximum 100.
+    pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
+    createIssueManually= false # If it is 'false', it is auto to make a Github issue when the administrators login.
+    distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
 
-   即可在http:127.0.0.1:1313/ 查看到构建后的页面了
+```
 
-7. 构建页面
+### 本地构建
 
-   hugo 
+`hugo server`
 
-   即可将网页生成到默认的public子目录里。当然你可以指定一个别的文件夹
+即可在http:127.0.0.1:1313/ 查看到构建后的页面了
 
-   ```shell
-   echo 'publishDir = "docs"' >> config.toml
-   ```
+### 构建页面
 
-   即以后生成的网页静态文件都到docs子目录下了。
+`hugo `
 
-8. 发布到github.io
+即可将网页生成到默认的public子目录里。当然你可以指定一个别的文件夹
 
-   将生成在docs下的网页文件推送到 `[your_username].github.io`库下，稍等一会儿你就可以看到你生成的网页了。
+```shell
+echo 'publishDir = "docs"' >> config.toml
+```
+
+即以后生成的网页静态文件都到docs子目录下了。
+
+### 发布到github.io
+
+将生成在docs下的网页文件推送到 `[your_username].github.io`库下，稍等一会儿你就可以看到你生成的网页了。
+
+## 引入持续集成方案 - travisci
+
+## 为博客添加站内搜索-algolia
+
+关于站内搜索，参考了很多博客，试了google的站内搜索方案，也试了algolia，最后选择了algolia
+
+其实被这个问题卡了2晚上，明明照着教程走，但是偏偏实现不了，再前端展示时，点击搜索按钮就404。最后参考 [采用ALGOLIA作为HUGO搜索方案 | BLOG折腾小记（6）](https://withdewhua.space/2018/11/23/search-with-algolia-in-hugo/) 解决了问题，原来问题的关键在于第一步，我没有建立 /search 页面：hugo new search/_index.md  ，所以才一直404。所以不论是看的哪篇文章的同志，请务必要先走这一步。
+
+这里也不重复制造废话了，直接参考上面的链接把。
+
+## 如何让别人搜到你的网站内容？
+
+当然时提交自己的博客地址到各大搜索引擎啦
+
+- Google [www.google.com/webmasters/…](https://link.juejin.im/?target=https%3A%2F%2Fwww.google.com%2Fwebmasters%2Ftools%2Fsubmit-url%3Fhl%3Dzh-CN)
+- 必应 [www.bing.com/toolbox/sub…](https://link.juejin.im/?target=https%3A%2F%2Fwww.bing.com%2Ftoolbox%2Fsubmit-site-url)
+- Baidu [ziyuan.baidu.com/linksubmit/…](https://link.juejin.im/?target=https%3A%2F%2Fziyuan.baidu.com%2Flinksubmit%2Findex)
+
+
+
+## SEO优化
+
+## 访问量、阅读量统计
+
+访问量可以使用google分析与百度分析站长工具。
+
+## 自定义域名
+
+## 网站运行时间、文章阅读量、网站访问量
+
+[Blog折腾小记](https://withdewhua.space/2018/09/16/Blog_2/)
 
 
 
@@ -172,7 +204,7 @@ categories:  ["Tech" ]
 
 优秀的Hugo建站博文
 
-[静态网站构建手册-使用Hugo构建个人博客](https://jimmysong.io/hugo-handbook/)
+[静态网站构建手册-使用Hugo构建个人博客](https://jimmysong.io/hugo-handbook/) `静态博客一整套，从头到尾`
 
 [Hugo 从入门到会用](https://blog.olowolo.com/post/hugo-quick-start/)
 

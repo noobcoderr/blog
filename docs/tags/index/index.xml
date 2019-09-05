@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Index on NoobCoder</title>
+    <link>http://noobcoderr.github.io/tags/index/</link>
+    <description>Recent content in Index on NoobCoder</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 22 Aug 2019 00:34:58 +0800</lastBuildDate>
+    
+	<atom:link href="http://noobcoderr.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World</title>
+      <link>http://noobcoderr.github.io/post/fst-post/</link>
+      <pubDate>Thu, 22 Aug 2019 00:34:58 +0800</pubDate>
+      
+      <guid>http://noobcoderr.github.io/post/fst-post/</guid>
+      <description>Hello World 欢迎 Golang相关 面向信仰编程 Golang 博客有深度，很多都是从源码讲起，需要一定的基础 飞雪无情的博客 Golang 比较基础，知识点循序渐进，适合初级go程</description>
+    </item>
+    
+  </channel>
+</rss>
