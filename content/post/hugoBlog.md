@@ -3,7 +3,6 @@ title: "使用Hugo + Github Page构建自己的个人博客"
 date: 2019-08-23T00:50:49+08:00
 subtitle:    ""
 description: ""
-date:        2018-06-04
 author:      "NoobCoder"
 image:       ""
 tags:        ["hugo blog", "github page"]

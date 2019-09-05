@@ -5,7 +5,7 @@ subtitle:    ""
 description: ""
 author:      "NoobCoder"
 image:       ""
-tags:        ["HelloWorld", "Index"]
+tags:        []
 categories:  ["Tech"]
 ---
 
