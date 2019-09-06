@@ -25,7 +25,7 @@ home = ["HTML", "RSS", "Algolia"]
   title_404 = "你来到了没有知识的荒原 :("
 
   #是否顯示toc
-  showToc = false
+  showToc = true
 
   # leancloud storage for page view counter
   page_view_conter = false 
