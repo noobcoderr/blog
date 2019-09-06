@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     
+    <meta name="baidu-site-verification" content="Zqb0rhmlpp" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,7 +79,9 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146689682-1"></script>
-
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
 
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -130,8 +133,7 @@
 
                     
 		    <li>
-                        <a href="/search">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search">
-                        </a>
+                        <a href="/search">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search"></a>
 		    </li>
                     
                 </ul>
@@ -185,8 +187,8 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/hugo" title="hugo">
-                            hugo
+                        <a class="tag" href="/tags/hugo-blog" title="hugo blog">
+                            hugo blog
                         </a>
                         
                         <a class="tag" href="/tags/github-page" title="github page">
@@ -202,7 +204,7 @@
                             NoobCoder
                          
                         on 
-                        Monday, June 4, 2018
+                        Friday, August 23, 2019
                         
                         
                         
@@ -227,9 +229,39 @@
                 post-container">
 
                 
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+<ul>
+<li><a href="#使用hugo-github-page构建自己的个人博客">使用Hugo + Github Page构建自己的个人博客</a>
+<ul>
+<li><a href="#前言">前言</a></li>
+<li><a href="#开始">开始</a>
+<ul>
+<li><a href="#安装hugo">安装hugo</a></li>
+<li><a href="#使用hugo创建网站">使用hugo创建网站</a></li>
+<li><a href="#生成文章">生成文章</a></li>
+<li><a href="#加载主题">加载主题</a></li>
+<li><a href="#修改配置文件-config-toml">修改配置文件 <code>config.toml</code></a></li>
+<li><a href="#本地构建">本地构建</a></li>
+<li><a href="#构建页面">构建页面</a></li>
+<li><a href="#发布到github-io">发布到github.io</a></li>
+</ul></li>
+<li><a href="#引入持续集成方案-travisci">引入持续集成方案 - travisci</a></li>
+<li><a href="#为博客添加站内搜索-algolia">为博客添加站内搜索-algolia</a></li>
+<li><a href="#如何让别人搜到你的网站内容">如何让别人搜到你的网站内容？</a></li>
+<li><a href="#seo优化">SEO优化</a></li>
+<li><a href="#访问量-阅读量统计">访问量、阅读量统计</a></li>
+<li><a href="#自定义域名">自定义域名</a></li>
+<li><a href="#网站运行时间-文章阅读量-网站访问量">网站运行时间、文章阅读量、网站访问量</a></li>
+</ul></li>
+</ul>
+</nav>
+                
                 
 
-<h2 id="使用hugo-github-page构建自己的个人博客">使用Hugo + Github Page构建自己的个人博客</h2>
+<h1 id="使用hugo-github-page构建自己的个人博客">使用Hugo + Github Page构建自己的个人博客</h1>
 
 <h2 id="前言">前言</h2>
 
@@ -244,19 +276,15 @@
 
 <h2 id="开始">开始</h2>
 
-<ol>
-<li>安装hugo</li>
-</ol>
+<h3 id="安装hugo">安装hugo</h3>
 
-<p>macos: brew install hugo</p>
+<p>macos: <code>brew install hugo</code></p>
 
 <p>windows: 源码安装后记得将可执行文件加如到环境变量中</p>
 
-<ol>
-<li>使用hugo创建网站</li>
-</ol>
+<h3 id="使用hugo创建网站">使用hugo创建网站</h3>
 
-<p>hugo new site blog</p>
+<p><code>hugo new site blog</code></p>
 
 <p>完成后会生成文件目录格式为</p>
 
@@ -270,41 +298,37 @@
 └── config.toml # 网站的配置文件</p>
 </blockquote>
 
-<ol>
-<li>生成文章</li>
-</ol>
+<h3 id="生成文章">生成文章</h3>
 
-<p>hugo new post/first-post.md</p>
+<p><code>hugo new post/first-post.md</code></p>
 
 <p>这个操作需要在该博客的根目录blog下操作，完成后会在content目录下生成post/first-post.md文件</p>
 
 <p>生成的md文件会携带一些信息</p>
 
-<pre><code class="language-go">   ---
-   title: &quot;first-post&quot;
-   date: 2019-09-03T20:56:47+08:00
-   draft: true
-   ---
+<pre><code class="language-go">---
+title: &quot;first-post&quot;
+date: 2019-09-03T20:56:47+08:00
+draft: true
+---
 </code></pre>
 
 <p><code>draft:true</code> 代表该篇文章为草稿。</p>
 
 <p>以上信息为自动生成，可以自己添加参数</p>
 
-<pre><code class="language-go">   title: &quot;使用Hugo + Github Page构建自己的个人博客&quot;
-   date: 2019-08-23T00:50:49+08:00
-   subtitle:    &quot;&quot;
-   description: &quot;&quot;
-   date:        2019-09-03T20:56:47+08:00
-   author:      &quot;NoobCoder&quot;
-   image:       &quot;&quot;
-   tags:        [&quot;hugo&quot;, &quot;github page&quot;]
-   categories:  [&quot;Tech&quot; ]
+<pre><code class="language-go">title: &quot;使用Hugo + Github Page构建自己的个人博客&quot;
+date: 2019-08-23T00:50:49+08:00
+subtitle:    &quot;&quot;
+description: &quot;&quot;
+date:        2019-09-03T20:56:47+08:00
+author:      &quot;NoobCoder&quot;
+image:       &quot;&quot;
+tags:        [&quot;hugo&quot;, &quot;github page&quot;]
+categories:  [&quot;Tech&quot; ]
 </code></pre>
 
-<ol>
-<li>加载主题</li>
-</ol>
+<h3 id="加载主题">加载主题</h3>
 
 <p><code>git init</code></p>
 
@@ -312,8 +336,7 @@
 
 <p>由于主题也是git库，所以需要添加为子模块的形式</p>
 
-<ol>
-<li><p>修改配置文件 <code>config.toml</code></p>
+<h3 id="修改配置文件-config-toml">修改配置文件 <code>config.toml</code></h3>
 
 <pre><code class="language-shell">baseURL = &quot;https://noobcoderr.github.io&quot; # 博客地址
 title = &quot;NoobCoder Blog&quot; # 浏览器的标题
@@ -325,71 +348,98 @@ enableEmoji = true # 支持 Emoji
 enableRobotsTXT = true # 支持 robots.txt
 googleAnalytics = &quot;&quot; # Google 统计 id
 preserveTaxonomyNames = true
-   
+
 [params]
-   since = 2017
-   author = &quot;NoobCoder&quot;                          # Author's name
-   avatar = &quot;/images/me/avatar.png&quot;           # Author's avatar
-   subtitle = &quot;Just for Fun&quot;                  # Subtitle
-   cdn_url = &quot;&quot;           # Base CDN URL
-   home_mode = &quot;&quot; # post or other
-   enableGitalk = true # gitalk 评论系统
-   google_verification = &quot;&quot;
-   description = &quot;&quot; # (Meta) 描述
-   keywords = &quot;&quot; # site keywords
-   beian = &quot;&quot;
-   baiduAnalytics = &quot;&quot;
-   license= '本文采用&lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot; target=&quot;_blank&quot;&gt;知识共享署名-非商业性使用 4.0 国际许可协议&lt;/a&gt;进行许可'
+    since = 2017
+    author = &quot;NoobCoder&quot;                          # Author's name
+    avatar = &quot;/images/me/avatar.png&quot;           # Author's avatar
+    subtitle = &quot;Just for Fun&quot;                  # Subtitle
+    cdn_url = &quot;&quot;           # Base CDN URL
+    home_mode = &quot;&quot; # post or other
+    enableGitalk = true # gitalk 评论系统
+    google_verification = &quot;&quot;
+    description = &quot;&quot; # (Meta) 描述
+    keywords = &quot;&quot; # site keywords
+    beian = &quot;&quot;
+    baiduAnalytics = &quot;&quot;
+    license= '本文采用&lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot; target=&quot;_blank&quot;&gt;知识共享署名-非商业性使用 4.0 国际许可协议&lt;/a&gt;进行许可'
 [params.social]
-   GitHub = &quot;xxoo&quot;
-   Twitter = &quot;xxoo&quot;
-   Email   = &quot;xxoo&quot;
-   Instagram = &quot;xxoo&quot;
-   Wechat = &quot;/images/me/wechat.png&quot;  # Wechat QRcode image
-   Facebook = &quot;xxoo&quot;
-   Telegram = &quot;xxoo&quot;
-   Dribbble = &quot;xxoo&quot;
-   Medium = &quot;xxoo&quot;
+    GitHub = &quot;xxoo&quot;
+    Twitter = &quot;xxoo&quot;
+    Email   = &quot;xxoo&quot;
+    Instagram = &quot;xxoo&quot;
+    Wechat = &quot;/images/me/wechat.png&quot;  # Wechat QRcode image
+    Facebook = &quot;xxoo&quot;
+    Telegram = &quot;xxoo&quot;
+    Dribbble = &quot;xxoo&quot;
+    Medium = &quot;xxoo&quot;
 [params.gitalk] # Github: https://github.com/gitalk/gitalk
-   clientID = &quot;&quot; # Your client ID
-   clientSecret = &quot;&quot; # Your client secret
-   repo = &quot;&quot; # The repo to store comments
-   owner = &quot;&quot; # Your GitHub ID
-   admin= &quot;&quot; # Required. Github repository owner and collaborators. (Users who having write access to this repository)
-   id= &quot;location.pathname&quot; # The unique id of the page.
-   labels= &quot;gitalk&quot; # Github issue labels. If you used to use Gitment, you can change it
-   perPage= 15 # Pagination size, with maximum 100.
-   pagerDirection= &quot;last&quot; # Comment sorting direction, available values are 'last' and 'first'.
-   createIssueManually= false # If it is 'false', it is auto to make a Github issue when the administrators login.
-   distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
-   
-</code></pre></li>
+    clientID = &quot;&quot; # Your client ID
+    clientSecret = &quot;&quot; # Your client secret
+    repo = &quot;&quot; # The repo to store comments
+    owner = &quot;&quot; # Your GitHub ID
+    admin= &quot;&quot; # Required. Github repository owner and collaborators. (Users who having write access to this repository)
+    id= &quot;location.pathname&quot; # The unique id of the page.
+    labels= &quot;gitalk&quot; # Github issue labels. If you used to use Gitment, you can change it
+    perPage= 15 # Pagination size, with maximum 100.
+    pagerDirection= &quot;last&quot; # Comment sorting direction, available values are 'last' and 'first'.
+    createIssueManually= false # If it is 'false', it is auto to make a Github issue when the administrators login.
+    distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
 
-<li><p>本地构建</p></li>
-</ol>
+</code></pre>
 
-<p>hugo server</p>
+<h3 id="本地构建">本地构建</h3>
+
+<p><code>hugo server</code></p>
 
 <p>即可在http:127.0.0.1:1313/ 查看到构建后的页面了</p>
 
-<ol>
-<li>构建页面</li>
-</ol>
+<h3 id="构建页面">构建页面</h3>
 
-<p>hugo</p>
+<p><code>hugo</code></p>
 
 <p>即可将网页生成到默认的public子目录里。当然你可以指定一个别的文件夹</p>
 
-<pre><code class="language-shell">   echo 'publishDir = &quot;docs&quot;' &gt;&gt; config.toml
+<pre><code class="language-shell">echo 'publishDir = &quot;docs&quot;' &gt;&gt; config.toml
 </code></pre>
 
 <p>即以后生成的网页静态文件都到docs子目录下了。</p>
 
-<ol>
-<li>发布到github.io</li>
-</ol>
+<h3 id="发布到github-io">发布到github.io</h3>
 
 <p>将生成在docs下的网页文件推送到 <code>[your_username].github.io</code>库下，稍等一会儿你就可以看到你生成的网页了。</p>
+
+<h2 id="引入持续集成方案-travisci">引入持续集成方案 - travisci</h2>
+
+<h2 id="为博客添加站内搜索-algolia">为博客添加站内搜索-algolia</h2>
+
+<p>关于站内搜索，参考了很多博客，试了google的站内搜索方案，也试了algolia，最后选择了algolia</p>
+
+<p>其实被这个问题卡了2晚上，明明照着教程走，但是偏偏实现不了，再前端展示时，点击搜索按钮就404。最后参考 <a href="https://withdewhua.space/2018/11/23/search-with-algolia-in-hugo/">采用ALGOLIA作为HUGO搜索方案 | BLOG折腾小记（6）</a> 解决了问题，原来问题的关键在于第一步，我没有建立 /search 页面：hugo new search/_index.md  ，所以才一直404。所以不论是看的哪篇文章的同志，请务必要先走这一步。</p>
+
+<p>这里也不重复制造废话了，直接参考上面的链接把。</p>
+
+<h2 id="如何让别人搜到你的网站内容">如何让别人搜到你的网站内容？</h2>
+
+<p>当然时提交自己的博客地址到各大搜索引擎啦</p>
+
+<ul>
+<li>Google <a href="https://link.juejin.im/?target=https%3A%2F%2Fwww.google.com%2Fwebmasters%2Ftools%2Fsubmit-url%3Fhl%3Dzh-CN">www.google.com/webmasters/…</a></li>
+<li>必应 <a href="https://link.juejin.im/?target=https%3A%2F%2Fwww.bing.com%2Ftoolbox%2Fsubmit-site-url">www.bing.com/toolbox/sub…</a></li>
+<li>Baidu <a href="https://link.juejin.im/?target=https%3A%2F%2Fziyuan.baidu.com%2Flinksubmit%2Findex">ziyuan.baidu.com/linksubmit/…</a></li>
+</ul>
+
+<h2 id="seo优化">SEO优化</h2>
+
+<h2 id="访问量-阅读量统计">访问量、阅读量统计</h2>
+
+<p>访问量可以使用google分析与百度分析站长工具。</p>
+
+<h2 id="自定义域名">自定义域名</h2>
+
+<h2 id="网站运行时间-文章阅读量-网站访问量">网站运行时间、文章阅读量、网站访问量</h2>
+
+<p><a href="https://withdewhua.space/2018/09/16/Blog_2/">Blog折腾小记</a></p>
 
 <p>问题：</p>
 
@@ -399,7 +449,7 @@ preserveTaxonomyNames = true
 
 <p>优秀的Hugo建站博文</p>
 
-<p><a href="https://jimmysong.io/hugo-handbook/">静态网站构建手册-使用Hugo构建个人博客</a></p>
+<p><a href="https://jimmysong.io/hugo-handbook/">静态网站构建手册-使用Hugo构建个人博客</a> <code>静态博客一整套，从头到尾</code></p>
 
 <p><a href="https://blog.olowolo.com/post/hugo-quick-start/">Hugo 从入门到会用</a></p>
 
@@ -453,9 +503,14 @@ preserveTaxonomyNames = true
                 <hr>
                 <ul class="pager">
                     
+                    <li class="previous">
+                        <a href="/post/fst-post/" data-toggle="tooltip" data-placement="top" title="Hello World">&larr;
+                            Previous Post</a>
+                    </li>
+                    
                     
                     <li class="next">
-                        <a href="/post/fst-post/" data-toggle="tooltip" data-placement="top" title="Hello World">Next
+                        <a href="/post/clasiccase/" data-toggle="tooltip" data-placement="top" title="软件工程经典案例">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -515,8 +570,8 @@ preserveTaxonomyNames = true
                         
                         
                         
-                        <a href="/tags/helloworld" title="helloworld">
-                            helloworld
+                        <a href="/tags/https" title="https">
+                            https
                         </a>
                         
                         
@@ -527,8 +582,8 @@ preserveTaxonomyNames = true
                         
                         
                         
-                        <a href="/tags/index" title="index">
-                            index
+                        <a href="/tags/hugo-blog" title="hugo-blog">
+                            hugo-blog
                         </a>
                         
                         
@@ -541,6 +596,12 @@ preserveTaxonomyNames = true
                         
                         <a href="/tags/travis" title="travis">
                             travis
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81" title="双向数字验证">
+                            双向数字验证
                         </a>
                         
                         
@@ -656,18 +717,29 @@ preserveTaxonomyNames = true
                 </ul>
 		<p class="copyright text-muted">
                     Copyright &copy; NoobCoder 2019
+                    <span id="busuanzi_container_site_pv">
+					    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+					</span>
                     <br>
+
                     <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="100px" height="20px"
                         src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
                     </iframe>
+                    
                 </p>
+            </div>
+            
+            <div>
+            	
             </div>
         </div>
     </div>
 </footer>
+
 
 
 
@@ -724,6 +796,39 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<center>
+Jzhang已启动 <span id=span_dt_dt style="color: #0196e3;"></span>
+<script language=javascript>
+function show_date_time(){
+	window.setTimeout("show_date_time()",1000);
+	BirthDay=new Date("8/22/2019 00:34:58");
+
+	today= new Date();
+	
+	timeold=(today.getTime()-BirthDay.getTime());
+	sectimeold=timeold/1000
+
+	secondsold=Math.floor(sectimeold);
+	msPerDay=24*60*60*1000
+
+	e_daysold=timeold/msPerDay
+	daysold=Math.floor(e_daysold);
+	e_hrsold=(e_daysold-daysold)*24;
+
+	hrsold=Math.floor(e_hrsold);
+	e_minsold=(e_hrsold-hrsold)*60;
+	minsold=Math.floor((e_hrsold-hrsold)*60);
+	seconds=Math.floor((e_minsold-minsold)*60);
+	span_dt_dt.innerHTML=""+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+show_date_time();
+</SCRIPT>
+</center>
+
 
 
 

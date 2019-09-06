@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Https</title>
+      <link>http://noobcoderr.github.io/tags/https/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://noobcoderr.github.io/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>hugo</title>
       <link>http://noobcoderr.github.io/tags/hugo/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
@@ -35,6 +44,15 @@
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>http://noobcoderr.github.io/tags/travis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>双向数字验证</title>
+      <link>http://noobcoderr.github.io/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://noobcoderr.github.io/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81/</guid>
       <description></description>
     </item>
     
@@ -57,29 +75,20 @@
     </item>
     
     <item>
-      <title>HelloWorld</title>
-      <link>http://noobcoderr.github.io/tags/helloworld/</link>
-      <pubDate>Thu, 22 Aug 2019 00:34:58 +0800</pubDate>
-      
-      <guid>http://noobcoderr.github.io/tags/helloworld/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Index</title>
-      <link>http://noobcoderr.github.io/tags/index/</link>
-      <pubDate>Thu, 22 Aug 2019 00:34:58 +0800</pubDate>
-      
-      <guid>http://noobcoderr.github.io/tags/index/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>github page</title>
       <link>http://noobcoderr.github.io/tags/github-page/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 23 Aug 2019 00:50:49 +0800</pubDate>
       
       <guid>http://noobcoderr.github.io/tags/github-page/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo blog</title>
+      <link>http://noobcoderr.github.io/tags/hugo-blog/</link>
+      <pubDate>Fri, 23 Aug 2019 00:50:49 +0800</pubDate>
+      
+      <guid>http://noobcoderr.github.io/tags/hugo-blog/</guid>
       <description></description>
     </item>
     

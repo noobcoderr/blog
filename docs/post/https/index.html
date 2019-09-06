@@ -18,9 +18,9 @@
     
 
     
-    <meta name="title" content="CI" />
-    <meta property="og:title" content="CI" />
-    <meta property="twitter:title" content="CI" />
+    <meta name="title" content="Https原理及双向数字验证" />
+    <meta property="og:title" content="Https原理及双向数字验证" />
+    <meta property="twitter:title" content="Https原理及双向数字验证" />
     
 
     
@@ -37,9 +37,9 @@
     <meta name="keyword"  content="����, ������վ, ������, Web, ��ԭ��, PaaS, Istio, Kubernetes, ΢����, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>CI-Jzhang Blog | Jzhang Blog</title>
+    <title>Https原理及双向数字验证-Jzhang Blog | Jzhang Blog</title>
 
-    <link rel="canonical" href="/tags/ci/">
+    <link rel="canonical" href="/post/https/">
 
     <link rel="stylesheet" href="/css/iDisqus.min.css"/>
 	
@@ -174,14 +174,41 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/go2.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/go2.jpg')
+    }
+</style>
+<header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>NoobCoder </h1>
-                    
-		    <span class="subheading"></span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/https" title="Https">
+                            Https
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81" title="双向数字验证">
+                            双向数字验证
+                        </a>
+                        
+                    </div>
+                    <h1>Https原理及双向数字验证</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                 &#34;Jzhang&#34;
+                         
+                        on 
+                        Wednesday, September 4, 2019
+                        
+                        
+                        
+                    </span>
                 </div>
             </div>
         </div>
@@ -190,233 +217,222 @@
 
 
 
-  
-<div class="container">
-    <div class="row">
-        
-        
-   	    <div class="
-            col-lg-8 col-lg-offset-1
-            col-md-8 col-md-offset-1
-            col-sm-12
-            col-xs-12
-            post-container
-        ">
+
+<article>
+    <div class="container">
+        <div class="row">
+
             
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-<div class="post-preview">
-    <a href="http://noobcoderr.github.io/post/test_travis_ci/">
-        <h2 class="post-title">
-            hugo博客使用持续集成工具travis-ci
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            hugo博客使用持续集成工具travis-ci 遇到的几个坑 1、 global: ​ Github Pages ​ GH_REF: github.com/noobcoderr/noobcoderr.github.io.git ​ GH_REF 后的链接加了个https，导致ci时没有access 2、 travis ci
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    Posted by      &#34;NoobCoder&#34; Wednesday, September 4, 2019
-    
-    
-    </p>
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+<ul>
+<li><a href="#https原理及双向数字验证">HTTPS原理及双向数字验证</a>
+<ul>
+<li><a href="#基础五-w">基础五&rdquo;W&rdquo;</a>
+<ul>
+<li><a href="#what-什么是https">What-什么是HTTPS</a></li>
+<li><a href="#why-为什么要用https">Why-为什么要用HTTPS</a></li>
+<li><a href="#how-如何实现https">How-如何实现HTTPS</a></li>
+<li><a href="#when-何时使用https">When-何时使用HTTPS</a></li>
+<li><a href="#where-在哪些地方使用https">Where-在哪些地方使用HTTPS</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                
+                
 
+<h1 id="https原理及双向数字验证">HTTPS原理及双向数字验证</h1>
+
+<h2 id="基础五-w">基础五&rdquo;W&rdquo;</h2>
+
+<h3 id="what-什么是https">What-什么是HTTPS</h3>
+
+<h3 id="why-为什么要用https">Why-为什么要用HTTPS</h3>
+
+<h3 id="how-如何实现https">How-如何实现HTTPS</h3>
+
+<h3 id="when-何时使用https">When-何时使用HTTPS</h3>
+
+<h3 id="where-在哪些地方使用https">Where-在哪些地方使用HTTPS</h3>
+
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>「真诚赞赏，手留余香」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
 </div>
-<hr>
-
-
-            
-
-
-
-       	</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="http://noobcoderr.github.io/"><img src="/img/favicon.png" />NoobCoder</a></span>
         
-
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
-        <div class="tags">
-             
-            
-                
-                    <a href="/tags/ci" title="ci">
-                        ci
-                    </a>
-                
-            
-                
-                    <a href="/tags/github-page" title="github-page">
-                        github-page
-                    </a>
-                
-            
-                
-                    <a href="/tags/https" title="https">
-                        https
-                    </a>
-                
-            
-                
-                    <a href="/tags/hugo" title="hugo">
-                        hugo
-                    </a>
-                
-            
-                
-                    <a href="/tags/hugo-blog" title="hugo-blog">
-                        hugo-blog
-                    </a>
-                
-            
-                
-                    <a href="/tags/software-engineer" title="software-engineer">
-                        software-engineer
-                    </a>
-                
-            
-                
-                    <a href="/tags/travis" title="travis">
-                        travis
-                    </a>
-                
-            
-                
-                    <a href="/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81" title="双向数字验证">
-                        双向数字验证
-                    </a>
-                
-            
-                
-                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B" title="软件工程">
-                        软件工程
-                    </a>
-                
-            
-        </div>
-    </section>
-    
-
-    
-	
-    <section class="visible-md visible-lg">
-	<hr><h5><a href="/top/about">ABOUT ME</a></h5>
-        <div class="short-about">
-            
-            <a href="/top/about">
-               <img src="/img/jzhang.jpg" alt="avatar" style="cursor: pointer" />
-            </a>
-            
-            
-                <p>Software Developer, Open Source Enthusiast and Life Adventurer</p>
-            
-           
-           <ul class="list-inline"> 
-               
-               <li>
-                   <a href='/tags/ci/index.xml' rel="alternate" type="application/rss+xml" title="NoobCoder" >
-                       <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="/your%20wechat%20qr%20code%20image">
-                       <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               <li>
-                   <a target="_blank" href="https://github.com/noobcoderr">
-                       <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="https://www.linkedin.com/in/yourlinkedinid">
-                       <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-                    <li>
-                        <a target="_blank" href="https://stackoverflow.com/users/yourstackoverflowid">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-            
-            
-            
-               
-                </ul>
-            </div>
-    </section>
-	
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
-            
-            <li><a target="_blank" href="/"></a></li>
-            
-        </ul>
-    </section>
-    
-
-    
-    
-    <section>
-        <hr>
-        <h5>BOOKMARKS</h5>
-        <ul class="list-inline">
-            
-            <li><a target="_blank" href="https://draveness.me/golang/">Simple Go Principle</a></li>
-            
-            <li><a target="_blank" href="https://jimmysong.io/hugo-handbook/">hugo-handbook</a></li>
-            
-        </ul>
-    </section>
-    
-</div>
-
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
 	</div>
 </div>
+<script type="text/javascript" src="/js/reward.js"></script>
 
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/test_travis_ci/" data-toggle="tooltip" data-placement="top" title="hugo博客使用持续集成工具travis-ci">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+                
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'c279f5088459d987985f',
+    clientSecret: '28f3f1c9515060bedff017a9bdd42ec2d3b4054c',
+    repo: 'noobcoderr.github.io',
+    owner: 'noobcoderr',
+    admin: ['noobcoderr'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost123", "127.0.0.123"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+
+            </div>
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/ci" title="ci">
+                            ci
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/github-page" title="github-page">
+                            github-page
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/https" title="https">
+                            https
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/hugo" title="hugo">
+                            hugo
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/hugo-blog" title="hugo-blog">
+                            hugo-blog
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/software-engineer" title="software-engineer">
+                            software-engineer
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/travis" title="travis">
+                            travis
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81" title="双向数字验证">
+                            双向数字验证
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B" title="软件工程">
+                            软件工程
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href=""></a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
 
 
 
@@ -428,7 +444,7 @@
                 <ul class="list-inline text-center">
                    
                    <li>
-                       <a href='/tags/ci/index.xml' rel="alternate" type="application/rss+xml" title="NoobCoder" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="NoobCoder" >
                            <span class="fa-stack fa-lg">
                                <i class="fa fa-circle fa-stack-2x"></i>
                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>

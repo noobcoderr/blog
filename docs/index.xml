@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Https原理及双向数字验证</title>
+      <link>http://noobcoderr.github.io/post/https/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://noobcoderr.github.io/post/https/</guid>
+      <description>HTTPS原理及双向数字验证 基础五&amp;rdquo;W&amp;rdquo; What-什么是HTTPS Why-为什么要用HTTPS How-如何实现HTT</description>
+    </item>
+    
+    <item>
       <title>hugo博客使用持续集成工具travis-ci</title>
       <link>http://noobcoderr.github.io/post/test_travis_ci/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
@@ -39,21 +48,21 @@
     </item>
     
     <item>
+      <title>使用Hugo &#43; Github Page构建自己的个人博客</title>
+      <link>http://noobcoderr.github.io/post/hugoblog/</link>
+      <pubDate>Fri, 23 Aug 2019 00:50:49 +0800</pubDate>
+      
+      <guid>http://noobcoderr.github.io/post/hugoblog/</guid>
+      <description>使用Hugo + Github Page构建自己的个人博客 前言 个人博客折腾历程 开始自学编程，意识到要用博客记录一些自己的学习笔记、遇到的问题、以及解决办法等</description>
+    </item>
+    
+    <item>
       <title>Hello World</title>
       <link>http://noobcoderr.github.io/post/fst-post/</link>
       <pubDate>Thu, 22 Aug 2019 00:34:58 +0800</pubDate>
       
       <guid>http://noobcoderr.github.io/post/fst-post/</guid>
       <description>Hello World 欢迎 Golang相关 面向信仰编程 Golang 博客有深度，很多都是从源码讲起，需要一定的基础 飞雪无情的博客 Golang 比较基础，知识点循序渐进，适合初级go程</description>
-    </item>
-    
-    <item>
-      <title>使用Hugo &#43; Github Page构建自己的个人博客</title>
-      <link>http://noobcoderr.github.io/post/hugoblog/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://noobcoderr.github.io/post/hugoblog/</guid>
-      <description>使用Hugo + Github Page构建自己的个人博客 前言 个人博客折腾历程 开始自学编程，意识到要用博客记录一些自己的学习笔记、遇到的问题、以及解决办法等</description>
     </item>
     
   </channel>

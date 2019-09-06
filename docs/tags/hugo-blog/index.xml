@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>github page on NoobCoder</title>
-    <link>http://noobcoderr.github.io/tags/github-page/</link>
-    <description>Recent content in github page on NoobCoder</description>
+    <title>hugo blog on NoobCoder</title>
+    <link>http://noobcoderr.github.io/tags/hugo-blog/</link>
+    <description>Recent content in hugo blog on NoobCoder</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 23 Aug 2019 00:50:49 +0800</lastBuildDate>
     
-	<atom:link href="http://noobcoderr.github.io/tags/github-page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://noobcoderr.github.io/tags/hugo-blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

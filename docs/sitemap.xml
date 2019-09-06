@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://noobcoderr.github.io/search/</loc>
+    <lastmod>2019-09-05T23:33:21+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noobcoderr.github.io/categories/</loc>
     <lastmod>2019-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://noobcoderr.github.io/tags/ci/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noobcoderr.github.io/tags/https/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noobcoderr.github.io/post/https/</loc>
     <lastmod>2019-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,6 +63,11 @@
   </url>
   
   <url>
+    <loc>http://noobcoderr.github.io/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noobcoderr.github.io/post/test5/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url>
@@ -68,28 +88,23 @@
   </url>
   
   <url>
-    <loc>http://noobcoderr.github.io/post/fst-post/</loc>
-    <lastmod>2019-08-22T00:34:58+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://noobcoderr.github.io/tags/helloworld/</loc>
-    <lastmod>2019-08-22T00:34:58+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://noobcoderr.github.io/tags/index/</loc>
-    <lastmod>2019-08-22T00:34:58+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://noobcoderr.github.io/tags/github-page/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-23T00:50:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noobcoderr.github.io/tags/hugo-blog/</loc>
+    <lastmod>2019-08-23T00:50:49+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://noobcoderr.github.io/post/hugoblog/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-23T00:50:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noobcoderr.github.io/post/fst-post/</loc>
+    <lastmod>2019-08-22T00:34:58+08:00</lastmod>
   </url>
   
 </urlset>

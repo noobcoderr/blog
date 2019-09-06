@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     
+    <meta name="baidu-site-verification" content="Zqb0rhmlpp" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,7 +79,9 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146689682-1"></script>
-
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
 
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -130,8 +133,7 @@
 
                     
 		    <li>
-                        <a href="/search">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search">
-                        </a>
+                        <a href="/search">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search"></a>
 		    </li>
                     
                 </ul>
@@ -185,14 +187,6 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/helloworld" title="HelloWorld">
-                            HelloWorld
-                        </a>
-                        
-                        <a class="tag" href="/tags/index" title="Index">
-                            Index
-                        </a>
-                        
                     </div>
                     <h1>Hello World</h1>
                     <h2 class="subheading"></h2>
@@ -226,6 +220,23 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hello-world">Hello World</a></li>
+<li><a href="#欢迎">欢迎</a>
+<ul>
+<li><a href="#golang相关">Golang相关</a></li>
+<li><a href="#个人随笔">个人随笔</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
                 
                 
 
@@ -293,14 +304,9 @@
                 <hr>
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/post/hugoblog/" data-toggle="tooltip" data-placement="top" title="使用Hugo &#43; Github Page构建自己的个人博客">&larr;
-                            Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/post/clasiccase/" data-toggle="tooltip" data-placement="top" title="软件工程经典案例">Next
+                        <a href="/post/hugoblog/" data-toggle="tooltip" data-placement="top" title="使用Hugo &#43; Github Page构建自己的个人博客">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -360,8 +366,8 @@
                         
                         
                         
-                        <a href="/tags/helloworld" title="helloworld">
-                            helloworld
+                        <a href="/tags/https" title="https">
+                            https
                         </a>
                         
                         
@@ -372,8 +378,8 @@
                         
                         
                         
-                        <a href="/tags/index" title="index">
-                            index
+                        <a href="/tags/hugo-blog" title="hugo-blog">
+                            hugo-blog
                         </a>
                         
                         
@@ -386,6 +392,12 @@
                         
                         <a href="/tags/travis" title="travis">
                             travis
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81" title="双向数字验证">
+                            双向数字验证
                         </a>
                         
                         
@@ -501,18 +513,29 @@
                 </ul>
 		<p class="copyright text-muted">
                     Copyright &copy; NoobCoder 2019
+                    <span id="busuanzi_container_site_pv">
+					    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+					</span>
                     <br>
+
                     <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="100px" height="20px"
                         src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
                     </iframe>
+                    
                 </p>
+            </div>
+            
+            <div>
+            	
             </div>
         </div>
     </div>
 </footer>
+
 
 
 
@@ -569,6 +592,39 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<center>
+Jzhang已启动 <span id=span_dt_dt style="color: #0196e3;"></span>
+<script language=javascript>
+function show_date_time(){
+	window.setTimeout("show_date_time()",1000);
+	BirthDay=new Date("8/22/2019 00:34:58");
+
+	today= new Date();
+	
+	timeold=(today.getTime()-BirthDay.getTime());
+	sectimeold=timeold/1000
+
+	secondsold=Math.floor(sectimeold);
+	msPerDay=24*60*60*1000
+
+	e_daysold=timeold/msPerDay
+	daysold=Math.floor(e_daysold);
+	e_hrsold=(e_daysold-daysold)*24;
+
+	hrsold=Math.floor(e_hrsold);
+	e_minsold=(e_hrsold-hrsold)*60;
+	minsold=Math.floor((e_hrsold-hrsold)*60);
+	seconds=Math.floor((e_minsold-minsold)*60);
+	span_dt_dt.innerHTML=""+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+show_date_time();
+</SCRIPT>
+</center>
+
 
 
 
