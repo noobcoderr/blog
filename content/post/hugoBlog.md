@@ -173,9 +173,21 @@ echo 'publishDir = "docs"' >> config.toml
 
 当然时提交自己的博客地址到各大搜索引擎啦
 
-- Google [www.google.com/webmasters/…](https://link.juejin.im/?target=https%3A%2F%2Fwww.google.com%2Fwebmasters%2Ftools%2Fsubmit-url%3Fhl%3Dzh-CN)
-- 必应 [www.bing.com/toolbox/sub…](https://link.juejin.im/?target=https%3A%2F%2Fwww.bing.com%2Ftoolbox%2Fsubmit-site-url)
-- Baidu [ziyuan.baidu.com/linksubmit/…](https://link.juejin.im/?target=https%3A%2F%2Fziyuan.baidu.com%2Flinksubmit%2Findex)
+#### Google
+
+[Google Search Console](https://search.google.com/search-console?resource_id=https%3A%2F%2Fnoobcoderr.github.io%2F)
+
+Google [www.google.com/webmasters/…](https://link.juejin.im/?target=https%3A%2F%2Fwww.google.com%2Fwebmasters%2Ftools%2Fsubmit-url%3Fhl%3Dzh-CN)
+
+#### Bing
+
+必应 [www.bing.com/toolbox/sub…](https://link.juejin.im/?target=https%3A%2F%2Fwww.bing.com%2Ftoolbox%2Fsubmit-site-url)
+
+#### Baidu
+
+Baidu [ziyuan.baidu.com/linksubmit/…](https://link.juejin.im/?target=https%3A%2F%2Fziyuan.baidu.com%2Flinksubmit%2Findex)
+
+参考文章 [要让Githubpages被索引到]([https://orianna-zzo.github.io/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B05-%E8%A6%81%E8%AE%A9github-pages%E8%A2%AB%E7%B4%A2%E5%BC%95%E5%88%B0/](https://orianna-zzo.github.io/sci-tech/2018-01/blog养成记5-要让github-pages被索引到/))
 
 
 
@@ -191,6 +203,8 @@ echo 'publishDir = "docs"' >> config.toml
 
 [Blog折腾小记](https://withdewhua.space/2018/09/16/Blog_2/)
 
+## 侧边toc，并且随着滑动监听
+
 
 
 问题：
@@ -202,6 +216,8 @@ echo 'publishDir = "docs"' >> config.toml
 
 
 优秀的Hugo建站博文
+
+[优秀blgo教程](https://orianna-zzo.github.io/tags/blog/)
 
 [静态网站构建手册-使用Hugo构建个人博客](https://jimmysong.io/hugo-handbook/) `静态博客一整套，从头到尾`
 
