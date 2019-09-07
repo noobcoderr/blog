@@ -1,12 +1,53 @@
 ---
 title: "使用Hugo + Github Page构建自己的个人博客"
+description: "Hugo 从入门到拉跨"
 date: 2019-08-23T00:50:49+08:00
-subtitle:    ""
-description: ""
-author:      "NoobCoder"
+lastmod: 2019-09-08T20:56:47+08:00
+subtitle:    ""  
+author:      NoobCoder
 image:       ""
-tags:        ["hugo blog", "github page"]
+tags:        ["hugo", "github page"]
 categories:  ["Tech" ]
+keywords: [ "Hugo", "keyword" ]
+
+# CJKLanguage: Chinese, Japanese, Korean
+isCJKLanguage: true
+
+# 如果draft为true，除非使用 --buildDrafts 参数，否则不会发布文章
+draft: false
+
+# 设置文章的过期时间，如果是已过期的文章则不会发布，除非使用 --buildExpired 参数
+# expiryDate: 2020-01-01
+# 设置文章的发布时间，如果是未来的时间则不会发布，除非使用 --buildFuture 参数
+# publishDate: 2020-01-01
+
+# 排序你的文章，好像可以当作置顶功能
+weight: 10
+
+# 使用这两个参数将会重置permalink，默认使用文件名
+#url: 
+#slug: 
+
+# 别名将通过重定向实现
+#aliases:
+#  - 别名1
+#  - /posts/my-original-url/
+#  - /2010/01/01/another-url.html
+
+# type 与 layout 参数将会改变 Hugo 寻找该文章模板的顺序，将在下一节细述
+#type: review
+#layout: reviewarticle
+
+# 三个比较复杂的参数
+#taxonomies:
+#linkTitle: 
+#outputs:
+# 实验性的参数
+markup: "md"
+
+# 你还可以自定义任何参数，这些参数可以在模板中使用
+#include_toc: true
+#show_comments: false
 ---
 
 # 使用Hugo + Github Page构建自己的个人博客
@@ -66,14 +107,55 @@ draft: true
 
 ```go
 title: "使用Hugo + Github Page构建自己的个人博客"
+description: "hugo实践"
 date: 2019-08-23T00:50:49+08:00
-subtitle:    ""
-description: ""
-date:        2019-09-03T20:56:47+08:00
-author:      "NoobCoder"
+lastmod: 2019-09-03T20:56:47+08:00
+
+subtitle:    ""  
+author:      NoobCoder
 image:       ""
 tags:        ["hugo", "github page"]
 categories:  ["Tech" ]
+keywords: [ "Hugo", "keyword" ]
+
+# CJKLanguage: Chinese, Japanese, Korean
+isCJKLanguage: true
+
+# 如果draft为true，除非使用 --buildDrafts 参数，否则不会发布文章
+draft: false
+
+# 设置文章的过期时间，如果是已过期的文章则不会发布，除非使用 --buildExpired 参数
+# expiryDate: 2020-01-01
+# 设置文章的发布时间，如果是未来的时间则不会发布，除非使用 --buildFuture 参数
+# publishDate: 2020-01-01
+
+# 排序你的文章
+weight: 40
+
+# 使用这两个参数将会重置permalink，默认使用文件名
+#url: 
+#slug: 
+
+# 别名将通过重定向实现
+#aliases:
+#  - 别名1
+#  - /posts/my-original-url/
+#  - /2010/01/01/another-url.html
+
+# type 与 layout 参数将会改变 Hugo 寻找该文章模板的顺序，将在下一节细述
+#type: review
+#layout: reviewarticle
+
+# 三个比较复杂的参数
+#taxonomies:
+#linkTitle: 
+#outputs:
+# 实验性的参数
+markup: "md"
+
+# 你还可以自定义任何参数，这些参数可以在模板中使用
+#include_toc: true
+#show_comments: false
 ```
 
 ### 加载主题
