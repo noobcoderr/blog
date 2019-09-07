@@ -1,7 +1,7 @@
 ---
 title:       "Https原理及双向数字验证"
 subtitle:    ""
-description: "HTTPS"
+description: "HTTPS、对称、非对称加密、公钥体系、CA、数字签名、数字证书"
 date:        2019-09-04
 lastmod:	 2019-09-07
 author:      Jzhang
