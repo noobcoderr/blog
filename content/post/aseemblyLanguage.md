@@ -45,7 +45,7 @@ ROM是常说的硬盘，如笔记本的动辄1T机械硬盘，手机宣传的128
 
 RAM，就是常说的内存啦，手机现在6+128的6就是内存
 
-![img](..\..\static\img\cpu_register.png)
+![img](img\cpu_register.png)
 
 ### 知识储备 内存模型
 
