@@ -1,7 +1,7 @@
 ---
 title: "汇编语言的简单学习与入门"
 date: 2019-09-07T23:39:43+08:00
-lastmod:2019-09-09
+lastmod: 2019-09-09
 subtitle:    "汇编？超底层的！"
 description: "什么是汇编？为什么要用汇编？优缺点？"
 author:      Jzhang
