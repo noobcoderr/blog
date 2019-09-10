@@ -6,10 +6,10 @@ publishDir = "docs"
 baseurl = "https://github.com/noobcoderr"
 title = "NoobCoder"
 googleAnalytics = "UA-146689682-1"
-# 保持分类的原始名字（false会做转小写处理）
+# 卤拢鲁脰路脰脌脿碌脛脭颅脢录脙没脳脰拢篓false禄谩脳枚脳陋脨隆脨麓麓娄脌铆拢漏
 preserveTaxonomyNames = true
-paginate = 5  # 每页的文章数
-hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
+paginate = 5  # 脙驴脪鲁碌脛脦脛脮脗脢媒
+hasCJKLanguage = true # 驴陋脝么驴脡脪脭脠脙隆赂脳脰脢媒脥鲁录脝隆鹿脥鲁录脝潞潞脳脰
 
 [outputs]
 home = ["HTML", "RSS", "Algolia"]
@@ -18,13 +18,13 @@ home = ["HTML", "RSS", "Algolia"]
   header_image = "img/go2.jpg"
   SEOTitle = "Jzhang Blog | Jzhang Blog"
   description = "Python,Golang"
-  keyword = "博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice"
+  keyword = "虏漏驴脥, 赂枚脠脣脥酶脮戮, 禄楼脕陋脥酶, Web, 脭脝脭颅脡煤, PaaS, Istio, Kubernetes, 脦垄路镁脦帽, Microservice"
   slogan = ""
 
   image_404 = "img/404-bg.jpg"
-  title_404 = "你来到了没有知识的荒原 :("
+  title_404 = "脛茫脌麓碌陆脕脣脙禄脫脨脰陋脢露碌脛禄脛脭颅 :("
 
-  #是否顯示toc
+  #脢脟路帽茂@脢戮toc
   showToc = false
 
   # leancloud storage for page view counter
@@ -43,7 +43,7 @@ home = ["HTML", "RSS", "Algolia"]
   sidebar_avatar = "img/jzhang.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true 
-#对标签数量进行限制的参数，填0则代表将所有文章标签都展示
+#露脭卤锚脟漏脢媒脕驴陆酶脨脨脧脼脰脝碌脛虏脦脢媒拢卢脤卯0脭貌麓煤卤铆陆芦脣霉脫脨脦脛脮脗卤锚脟漏露录脮鹿脢戮
   featured_condition_size = 0 
 
   # Baidu Analytics
@@ -51,14 +51,14 @@ home = ["HTML", "RSS", "Algolia"]
 
   #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
   reward = true 
-  # reward_guide = "如果这篇文章对你有用,请随意打赏" 
+  # reward_guide = "脠莽鹿没脮芒脝陋脦脛脮脗露脭脛茫脫脨脫脙,脟毛脣忙脪芒麓貌脡脥" 
 
   friends = true
   bookmarks = true
   about_me = true
   enableGitalk = true
- #这段gittalk配置放在highlightjs之后，就会导致显示不了，加格式错误，文章一个
- #滑动条，整个页面一个滑动条
+ #脮芒露脦gittalk脜盲脰脙路脜脭脷highlightjs脰庐潞贸拢卢戮脥禄谩碌录脰脗脧脭脢戮虏禄脕脣拢卢录脫赂帽脢陆麓铆脦贸拢卢脦脛脮脗脪禄赂枚
+ #禄卢露炉脤玫拢卢脮没赂枚脪鲁脙忙脪禄赂枚禄卢露炉脤玫
  [params.gitalk]
    clientID = "c279f5088459d987985f"
    clientSecret = "28f3f1c9515060bedff017a9bdd42ec2d3b4054c"
@@ -102,7 +102,7 @@ home = ["HTML", "RSS", "Algolia"]
   #git           = "full profile url for git user"
   
   [[params.friend_link]]
-  #title = "Linda的博客"
+  #title = "Linda碌脛虏漏驴脥"
   #href =  "https://zhaozhihan.com"
 
   [[params.bookmark_link]]

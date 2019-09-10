@@ -2,7 +2,7 @@
 title: "使用Hugo + Github Page构建自己的个人博客"
 description: "Hugo 从入门到拉跨"
 date: 2019-08-23T00:50:49+08:00
-lastmod: 2019-09-08T20:56:47+08:00
+lastmod: 2019-09-10T20:56:47+08:00
 subtitle:    ""  
 author:      NoobCoder
 image:       ""
@@ -22,7 +22,7 @@ draft: false
 # publishDate: 2020-01-01
 
 # 排序你的文章，好像可以当作置顶功能
-weight: 10
+# weight: 10
 
 # 使用这两个参数将会重置permalink，默认使用文件名
 #url: 
@@ -102,6 +102,11 @@ draft: true
 ```
 
 `draft:true` 代表该篇文章为草稿。
+
+如果要在文章内插入图片，可以
+
+1. 将图片放到CDN，直接放cdn图片地址
+2. 就放在static/img下，在config.toml内加入baseurl，引入图片时，以static为根目录，即我的baseurl为`https://noobcoderr.github.io`,我的静态文件存放在`static/img/xx.jpg`,那么我在文中引入图片时的路径为`![](/img/xx.jpg)`，这样做在写md时可能显示不出来图片，但是部署到github pages上时，图片时可以显示的。
 
 以上信息为自动生成，可以自己添加参数
 
