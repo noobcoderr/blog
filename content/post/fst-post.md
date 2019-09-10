@@ -3,7 +3,7 @@ title: "Hello World"
 date: 2019-08-22T00:34:58+08:00
 subtitle:    ""
 description: ""
-author:      "NoobCoder"
+author:      NoobCoder
 image:       ""
 tags:        []
 categories:  ["Tech"]

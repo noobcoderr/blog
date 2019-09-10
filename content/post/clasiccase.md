@@ -3,7 +3,7 @@ title: "软件工程经典案例"
 date: 2019-08-25T23:57:16+08:00
 subtitle:    ""
 description: ""
-author:      "NoobCoder"
+author:      NoobCoder
 image:       ""
 tags:        ["软件工程", "software engineer"]
 categories:  ["Tech"]

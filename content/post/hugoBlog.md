@@ -248,6 +248,8 @@ echo 'publishDir = "docs"' >> config.toml
 
 ## 引入持续集成方案 - travisci
 
+github获取的auth_token好像会过期？一个用了几天发现自动部署时push失败，然后重新生成一个token换上去之后又好了。
+
 ## 为博客添加站内搜索-algolia
 
 关于站内搜索，参考了很多博客，试了google的站内搜索方案，也试了algolia，最后选择了algolia

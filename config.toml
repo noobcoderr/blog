@@ -6,25 +6,25 @@ publishDir = "docs"
 baseurl = "https://github.com/noobcoderr"
 title = "NoobCoder"
 googleAnalytics = "UA-146689682-1"
-# ±£³Ö·ÖÀàµÄÔ­Ê¼Ãû×Ö£¨false»á×ö×ªÐ¡Ð´´¦Àí£©
+# 
 preserveTaxonomyNames = true
-paginate = 5  # Ã¿Ò³µÄÎÄÕÂÊý
-hasCJKLanguage = true # ¿ªÆô¿ÉÒÔÈÃ¡¸×ÖÊýÍ³¼Æ¡¹Í³¼Æºº×Ö
+paginate = 5  # 
+hasCJKLanguage = true # 
 
 [outputs]
 home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/go2.jpg"
-  SEOTitle = "Jzhang Blog | Jzhang Blog"
-  description = "Python,Golang"
-  keyword = "²©¿Í, ¸öÈËÍøÕ¾, »¥ÁªÍø, Web, ÔÆÔ­Éú, PaaS, Istio, Kubernetes, Î¢·þÎñ, Microservice"
+  SEOTitle = "Hugo Blog | Golang Blog"
+  description = "Golang"
+  keyword = "PaaS, Istio, Kubernetes, Microservice"
   slogan = ""
 
   image_404 = "img/404-bg.jpg"
-  title_404 = "ÄãÀ´µ½ÁËÃ»ÓÐÖªÊ¶µÄ»ÄÔ­ :("
+  title_404 = ":("
 
-  #ÊÇ·ñï@Ê¾toc
+  #toc
   showToc = false
 
   # leancloud storage for page view counter
@@ -40,10 +40,11 @@ home = ["HTML", "RSS", "Algolia"]
 
   # Sidebar settings
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
-  sidebar_avatar = "img/jzhang.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_avatar = "img/jzhang.jpg"      
+  # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true 
-#¶Ô±êÇ©ÊýÁ¿½øÐÐÏÞÖÆµÄ²ÎÊý£¬Ìî0Ôò´ú±í½«ËùÓÐÎÄÕÂ±êÇ©¶¼Õ¹Ê¾
+
   featured_condition_size = 0 
 
   # Baidu Analytics
@@ -57,8 +58,7 @@ home = ["HTML", "RSS", "Algolia"]
   bookmarks = true
   about_me = true
   enableGitalk = true
- #Õâ¶ÎgittalkÅäÖÃ·ÅÔÚhighlightjsÖ®ºó£¬¾Í»áµ¼ÖÂÏÔÊ¾²»ÁË£¬¼Ó¸ñÊ½´íÎó£¬ÎÄÕÂÒ»¸ö
- #»¬¶¯Ìõ£¬Õû¸öÒ³ÃæÒ»¸ö»¬¶¯Ìõ
+
  [params.gitalk]
    clientID = "c279f5088459d987985f"
    clientSecret = "28f3f1c9515060bedff017a9bdd42ec2d3b4054c"
@@ -88,11 +88,11 @@ home = ["HTML", "RSS", "Algolia"]
   #facebook      = "full profile url in facebook"
   #googleplus    = "full profile url in googleplus"
   #twitter       = "full profile url in twitter"
-  linkedin       = "https://www.linkedin.com/in/yourlinkedinid"
-  stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
+  #linkedin       = "https://www.linkedin.com/in/yourlinkedinid"
+  #stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
   #instagram     = "full profile url in instagram"
   github         = "https://github.com/noobcoderr"
-  wechat         = "your wechat qr code image"
+  #wechat         = "your wechat qr code image"
 #medium         = "full profile url in medium"
   #pinterest     = "full profile url in pinterest"
   #reddit        = "full profile url in reddit"
