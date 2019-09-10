@@ -50,7 +50,7 @@ Register，寄存器。缓存存储地址为随机，每次读取还得先寻址
 
 寄存器不依赖地址区分数据，而是用名字区分，直接让cpu去某个寄存器取数据这样速度最快，因此有人将寄存器比作零级缓存。
 
-![img](../../static/img/cpu_register.png)
+![img](img/cpu_register.png)
 
 #### 寄存器种类
 
@@ -74,7 +74,7 @@ Register，寄存器。缓存存储地址为随机，每次读取还得先寻址
 
 程序运行时，OS给其分配一段内存，用于存储程序代码以及产生的数据。这段内存有起始地址(0x1000)和结束地址(0x8000)。
 
-![img](..\..\static\img\romModel.png)
+![img](img/romModel.png)
 
 程序运行过程种，对于动态的内存占用请求(新建对象，malloc)，系统会从预先分配好的那段内存中，从起始位置开始，分配给用户所需要的内存大小。
 
@@ -82,13 +82,13 @@ Register，寄存器。缓存存储地址为随机，每次读取还得先寻址
 
 Heap的特点是不会自动消失，需要手动释放或者等待垃圾回收机制来处理。
 
-![img](..\..\static\img\Heap.png)
+![img](\img\Heap.png)
 
 #### Stack  栈
 
 Stack是由于函数运行而临时占用的内存，除了Heap外，其余内存都是栈
 
-![img](..\..\static\img\stack.png)
+![img](img/stack.png)
 
 举例：
 
@@ -101,7 +101,7 @@ int main() {
 
 当执行main函数时，系统会位它在内存中建立以个帧(frame)，main函数内部的变量a，b都保存在内。main函数结束后，帧被收回，释放所有内部变量，不再占用空间。
 
-![img](..\..\static\img\stack1main.png)
+![img](img/stack1main.png)
 
 如果main调用了其他函数
 
@@ -115,13 +115,13 @@ int main() {
 
 当执行到return语句时，系统会位该函数建立一个帧，该函数内部变量存在该帧内，当该函数结束，那么这帧被收回，函数会回到main被中止的地方，继续往下。可以说由多少层函数调用，就有多少帧，通过该机制实现函数层层调用，每一层都有自己的变量。
 
-![img](..\..\static\img\stack2call.png)
+![img](img/stack2call.png)
 
 所有的帧都存放在 Stack，由于帧是一层层叠加的，所以 Stack 叫做栈。生成新的帧，叫做"入栈"，英文是 push；栈的回收叫做"出栈"，英文是 pop。Stack 的特点就是，最晚入栈的帧最早出栈（因为最内层的函数调用，最先结束运行），这就叫做"后进先出"的数据结构。每一次函数执行结束，就自动释放一个帧，所有函数执行结束，整个 Stack 就都释放了。
 
-![img](..\..\static\img\stack3push.jpg)
+![img](img/stack3push.jpg)
 
-![img](..\..\static\img\stack3pop.jpg)
+![img](img/stack3pop.jpg)
 
 stack时由高位向低位分配内存。
 
