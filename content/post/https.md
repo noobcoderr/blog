@@ -154,19 +154,19 @@ CA机构也有自己的公钥私钥，那么它自己的公钥该由谁来证明
 
 ### HTTPS单向认证
 
-![httpSingleAuth](../../static/img/httpSingleAuth.png)
+![httpSingleAuth](/img/httpSingleAuth.png)
 
 ### HTTPS双向认证
 
-![httpTwoWayAuth](../../static/img/httpTwoWayAuth.png)
+![httpTwoWayAuth](/img/httpTwoWayAuth.png)
 
 
 
 ## Where-在哪些地方使用HTTPS
 
-## 双向认证
 
-![twoAuth](../../static/img/https.png)
+
+![twoAuth](/img/https.png)
 
 ## Q&A
 
