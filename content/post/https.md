@@ -5,7 +5,7 @@ description: "HTTPS、对称、非对称加密、公钥体系、CA、数字签�
 date:        2019-09-04
 lastmod:     2019-09-09
 author:      Jzhang
-image:       ""
+image:       "img/theme/gopher123.png"
 tags:        ["Https", "双向数字验证"]
 categories:  ["Tech" ]
 ---
@@ -154,11 +154,11 @@ CA机构也有自己的公钥私钥，那么它自己的公钥该由谁来证明
 
 ### HTTPS单向认证
 
-![httpSingleAuth](/img/httpSingleAuth.png)
+![httpSingleAuth](/img/httpsTowWayAuth/httpSingleAuth.png)
 
 ### HTTPS双向认证
 
-![httpTwoWayAuth](/img/httpTwoWayAuth.png)
+![httpTwoWayAuth](/img/httpsTowWayAuth/httpTwoWayAuth.png)
 
 
 
