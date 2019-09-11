@@ -3,7 +3,7 @@ title:       "hugo博客使用持续集成工具travis-ci"
 subtitle:    ""
 description: ""
 date:        2019-09-04
-author:      "NoobCoder"
+author:      NoobCoder
 image:       ""
 tags:        ["travis", "hugo","CI"]
 categories:  ["Tech" ]
