@@ -8,7 +8,7 @@ title = "NoobCoder"
 googleAnalytics = "UA-146689682-1"
 # 
 preserveTaxonomyNames = true
-paginate = 5  # 
+paginate = 6  # 
 hasCJKLanguage = true # 
 
 [outputs]
