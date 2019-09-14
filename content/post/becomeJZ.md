@@ -3,7 +3,7 @@ title:       "变的精致"
 subtitle:    ""
 description: "男孩子也可以变的精致"
 date:        2019-09-14
-author:      ""
+author:      NoobCoder
 image:       ""
 tags:        ["精致"]
 categories:  ["Tech" ]
