@@ -1,15 +1,13 @@
 ---
-title: "软件工程经典案例"
+title: "软件工程之美学习笔记-软件工程经典案例"
 date: 2019-08-25T23:57:16+08:00
 subtitle:    ""
 description: ""
 author:      NoobCoder
 image:       ""
-tags:        ["软件工程", "software engineer"]
+tags:        ["软件工程"]
 categories:  ["Tech"]
 ---
-
-# 经典案例解析
 
 ## 为什么程序员的业余项目都死了？
 

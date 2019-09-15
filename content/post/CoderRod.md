@@ -5,7 +5,7 @@ description: ""
 date:        2019-09-14
 author:      NoobCoder
 image:       ""
-tags:        ["tag1"]
+tags:        []
 categories:  ["Tech" ]
 ---
 
@@ -45,7 +45,6 @@ categories:  ["Tech" ]
 - [ ] 并发性
 - [ ] 内存
 - [ ] 调度
-- [ ] 
 
 
 
@@ -72,6 +71,8 @@ categories:  ["Tech" ]
 ## 开发相关
 
 ### 软件工程
+
+- [ ] 《软件工程之美》
 
 ### 设计模式
 
