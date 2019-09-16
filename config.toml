@@ -51,7 +51,7 @@ home = ["HTML", "RSS", "Algolia"]
   ba_track_id = ""
 
   #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
-  reward = true 
+  reward = false 
   # reward_guide = "Èç¹ûÕâÆªÎÄÕÂ¶ÔÄãÓÐÓÃ,ÇëËæÒâ´òÉÍ" 
 
   friends = true
