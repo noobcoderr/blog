@@ -3,6 +3,7 @@ title:       "工作中遇到的并发"
 subtitle:    ""
 description: ""
 date:        2019-09-18
+lastmod:     2019-09-18
 author:      NoobCoder
 image:       ""
 tags:        ["并发", "锁"]
@@ -23,9 +24,7 @@ categories:  ["Tech" ]
 
 在思考问题出现的可能：
 
-1、token过期，大量的请求的逻辑变为去拿锁刷token，发现锁也是不可用状态于是sleep后重新询问，但是已经有一个请求获得了锁，并已经处于调QQ token接口获取token然后存到redis的流程里了，
-
-
+1、token过期，大量的请求的逻辑变为去拿锁刷token，发现锁也是不可用状态于是sleep后重新询问，但是已经有一个请求获得了锁，并已经处于调QQ token接口获取token然后存到redis的流程里了，回去再去看看休眠重查流程，感觉应该是这里出问题了
 
 
 
