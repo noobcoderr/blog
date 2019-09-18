@@ -3,7 +3,7 @@ title:       "并发"
 subtitle:    ""
 description: "并发？并发的难点？并发与golang？"
 date:        2019-09-11
-lastmod:     2019-09-18
+lastmod:     2019-09-19
 author:      NoobCoder
 image:       ""
 tags:        ["并发"]
@@ -78,3 +78,14 @@ categories:  ["Tech" ]
 
 
 
+## 高并发处理思路与手段
+
+![img](/img/hignConc.jpg)
+
+## 参考文章
+
+[面试并发知识梳理汇总](https://zhuanlan.zhihu.com/p/34614839)
+
+[Python并发编程](https://python-online.cn/zh_CN/latest/chapters/p02.html)
+
+[并发基础](https://blog.csdn.net/ITer_ZC/article/details/42101377)
