@@ -10,6 +10,7 @@ googleAnalytics = "UA-146689682-1"
 preserveTaxonomyNames = true
 paginate = 6  # 
 hasCJKLanguage = true # 
+# 这个是github.io上的博客
 
 [outputs]
 home = ["HTML", "RSS", "Algolia"]

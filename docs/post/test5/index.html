@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 <head>
     
-    <meta name="baidu-site-verification" content="Zqb0rhmlpp" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,15 +17,15 @@
     
 
     
-    <meta name="title" content="An Example Post" />
-    <meta property="og:title" content="An Example Post" />
-    <meta property="twitter:title" content="An Example Post" />
+    <meta name="title" content="如何写博客呢？" />
+    <meta property="og:title" content="如何写博客呢？" />
+    <meta property="twitter:title" content="如何写博客呢？" />
     
 
     
-    <meta name="description" content="Python,Golang">
-    <meta property="og:description" content="Python,Golang" />
-    <meta property="twitter:description" content="Python,Golang" />
+    <meta name="description" content="怎么组织？怎么引入？">
+    <meta property="og:description" content="怎么组织？怎么引入？" />
+    <meta property="twitter:description" content="怎么组织？怎么引入？" />
     
 
     
@@ -34,10 +33,10 @@
     
     
 
-    <meta name="keyword"  content="����, ������վ, ������, Web, ��ԭ��, PaaS, Istio, Kubernetes, ΢����, Microservice">
+    <meta name="keyword"  content="PaaS, Istio, Kubernetes, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>An Example Post-Jzhang Blog | Jzhang Blog</title>
+    <title>如何写博客呢？-Hugo Blog | Golang Blog</title>
 
     <link rel="canonical" href="/post/test5/">
 
@@ -82,6 +81,22 @@
     
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
     </script>
+
+    
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+</script>
 
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -187,19 +202,27 @@
                 <div class="post-heading">
                     <div class="tags">
                         
+                        <a class="tag" href="/tags/%E5%86%99%E5%8D%9A%E5%AE%A2" title="写博客">
+                            写博客
+                        </a>
+                        
                     </div>
-                    <h1>An Example Post</h1>
+                    <h1>如何写博客呢？</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
-                        Posted by 
+                        作者  
                         
-                                 &#34;noobcoderr&#34;
+                                 NoobNoder
                          
-                        on 
-                        Tuesday, September 3, 2019
+                         创建于 
+                        2019-09-11
                         
                         
                         
+                        <br>
+                        <span id="busuanzi_container_page_pv">
+                          被 <span id="busuanzi_value_page_pv"></span>位智者参考过
+                        </span>
                     </span>
                 </div>
             </div>
@@ -221,52 +244,25 @@
                 post-container">
 
                 
-                <header>
-                    <h2>TOC</h2>
-                </header>
-                
-                
-                
+                <h1 id="heading">写博客该怎么写</h1>
+<h2 id="heading-1">背景</h2>
+<p>最近在写一些博客，有些是阅读笔记，有些是自己遇到的问题，有的则是一些实践记录。</p>
+<p>在写作的过程中，也是总结了出了一点点学习和写作的小经验，现在将其组织整理出来。</p>
+<h2 id="heading-2">要&quot;知其然，知其所以然&rdquo;</h2>
+<p>俗话说，知己知彼，百战不殆，我们要想介绍一个知识点，必不可缺的就是一个简单易懂的背景，就是为什么会出现这个知识点，这个知识点的出现解决了背景下的什么问题？又带来了什么新问题？在开始学习时，最重要的是第一点(why)，但很多时候我们没搞清这一点就开始学，导致学的迷迷糊糊，学了也不知道怎么用，在哪儿用。这样学到的知识既不长久，也不容易理解。</p>
+<p>所以一篇文章得写一个令人一看就懂的背景介绍来引入该知识点，最后总结时一定要想想该知识点的出现解决了什么问题。</p>
+<h2 id="heading-3">要&quot;高内聚，低耦合&rdquo;</h2>
+<p>比较常见的一个现象就是，当我们想要讲一个知识点时，往往需要一些其他的信息或知识点来铺路，或者在讲解过程中引入一些相关的知识点来进行佐证，但是我们往往(可能是我们这些新手)会容易控制不住度，造成这些&quot;其他&quot;的知识点说的太多了，好像这个铺垫的知识点或者引入的相关知识点也变的像一个主题了，这就会让阅读的人搞不清重点或者知识点太多而吸收不了，这样就有点本末倒置了。</p>
+<p>一篇博客总有一个主题，那么我们也就得围着这个主题来写，对于其依赖的其他知识，我们需要选择适当地略过，不然这篇文章就会变成一篇知识大杂烩了，让人看到后吸收不了。</p>
+<h2 id="heading-4">全局大纲</h2>
+<p>凡事预则立，不预则废。</p>
+<p>想要系统地整理一个知识点，得先从全局总览一下包含哪些哪些知识点，该如何组织介绍。而不是漫无目的地去写，想到一点就写一点无组织，无规范。其实随便一个知识点我觉得都可以由以下的结构来进行整理：<strong>引入背景、概念、如何实现/实现方式/应用、优缺点、不足及替代/改进方案、总结。</strong></p>
+<p>有了大纲，那么我们整理起来也更加方便，记忆理解起来也更加模块化。</p>
+<h2 id="heading-5">总结</h2>
+<p>1、一定要理解引入地背景。理解完才开始系统地学习</p>
+<p>2、一定要列大纲，然后按大纲的模块去整理、去记忆</p>
+<p>3、其他知识点选择性一带而过就好，不必深究细节。</p>
 
-                
-                
-<div class="entry-shang text-center">
-    
-	    <p>「真诚赞赏，手留余香」</p>
-	
-	<button class="zs show-zs btn btn-bred">赞赏支持</button>
-</div>
-<div class="zs-modal-bg"></div>
-<div class="zs-modal-box">
-	<div class="zs-modal-head">
-		<button type="button" class="close">×</button>
-		<span class="author"><a href="http://noobcoderr.github.io/"><img src="/img/favicon.png" />NoobCoder</a></span>
-        
-	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
-		
- 
-	</div>
-	<div class="zs-modal-body">
-		<div class="zs-modal-btns">
-			<button class="btn btn-blink" data-num="2">2元</button>
-			<button class="btn btn-blink" data-num="5">5元</button>
-			<button class="btn btn-blink" data-num="10">10元</button>
-			<button class="btn btn-blink" data-num="50">50元</button>
-			<button class="btn btn-blink" data-num="100">100元</button>
-			<button class="btn btn-blink" data-num="1">任意金额</button>
-		</div>
-		<div class="zs-modal-pay">
-			<button class="btn btn-bred" id="pay-text">2元</button>
-			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
-			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
-		</div>
-	</div>
-	<div class="zs-modal-footer">
-		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
-		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
-	</div>
-</div>
-<script type="text/javascript" src="/js/reward.js"></script>
 
                 
 
@@ -274,13 +270,13 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/clasiccase/" data-toggle="tooltip" data-placement="top" title="软件工程经典案例">&larr;
+                        <a href="/post/concurrent/" data-toggle="tooltip" data-placement="top" title="并发">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/post/test_travis_ci/" data-toggle="tooltip" data-placement="top" title="hugo博客使用持续集成工具travis-ci">Next
+                        <a href="/post/myvalue/" data-toggle="tooltip" data-placement="top" title="聊聊 “三观”">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -328,6 +324,12 @@
                         
                         
                         
+                        <a href="/tags/api" title="api">
+                            api
+                        </a>
+                        
+                        
+                        
                         <a href="/tags/ci" title="ci">
                             ci
                         </a>
@@ -336,6 +338,12 @@
                         
                         <a href="/tags/github-page" title="github-page">
                             github-page
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/golang" title="golang">
+                            golang
                         </a>
                         
                         
@@ -352,14 +360,14 @@
                         
                         
                         
-                        <a href="/tags/hugo-blog" title="hugo-blog">
-                            hugo-blog
+                        <a href="/tags/question_a_day" title="question_a_day">
+                            question_a_day
                         </a>
                         
                         
                         
-                        <a href="/tags/software-engineer" title="software-engineer">
-                            software-engineer
+                        <a href="/tags/todo" title="todo">
+                            todo
                         </a>
                         
                         
@@ -370,14 +378,92 @@
                         
                         
                         
+                        <a href="/tags/%E4%B8%89%E8%A7%82" title="三观">
+                            三观
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E4%B9%90%E7%90%86%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0" title="乐理入门学习">
+                            乐理入门学习
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E4%B9%A6%E5%8D%95" title="书单">
+                            书单
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%86%99%E5%8D%9A%E5%AE%A2" title="写博客">
+                            写博客
+                        </a>
+                        
+                        
+                        
                         <a href="/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81" title="双向数字验证">
                             双向数字验证
                         </a>
                         
                         
                         
+                        <a href="/tags/%E5%B7%A5%E4%BD%9C" title="工作">
+                            工作
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%B9%B6%E5%8F%91" title="并发">
+                            并发
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" title="操作系统">
+                            操作系统
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA" title="方法论">
+                            方法论
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E6%B1%87%E7%BC%96" title="汇编">
+                            汇编
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E7%B2%BE%E8%87%B4" title="精致">
+                            精致
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E8%A7%84%E5%88%92" title="规划">
+                            规划
+                        </a>
+                        
+                        
+                        
                         <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B" title="软件工程">
                             软件工程
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E9%94%81" title="锁">
+                            锁
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92" title="项目规划">
+                            项目规划
                         </a>
                         
                         
@@ -409,7 +495,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <span id="busuanzi_container_site_uv">
+                    	<center>宁来了？天字<span id="busuanzi_value_site_uv"></span>号雅座一位</center>
+					    
+					</span>
                 <ul class="list-inline text-center">
+
                    
                    <li>
                        <a href='' rel="alternate" type="application/rss+xml" title="NoobCoder" >
@@ -439,15 +530,6 @@
 
 		    
                     
-                    <li>
-                        <a target="_blank" href="/your%20wechat%20qr%20code%20image">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-		    
                     
                     <li>
                         <a target="_blank" href="https://github.com/noobcoderr">
@@ -461,35 +543,15 @@
                     
                     
                     
-                    <li>
-                        <a target="_blank" href="https://www.linkedin.com/in/yourlinkedinid">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-		    
                     
                     
-                    <li>
-                        <a target="_blank" href="https://stackoverflow.com/users/yourstackoverflowid">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-            
                     
                     
                     
                 </ul>
 		<p class="copyright text-muted">
-                    Copyright &copy; NoobCoder 2019
-                    <span id="busuanzi_container_site_pv">
-					    本站总访问量<span id="busuanzi_value_site_pv"></span>次
-					</span>
+                    Copyright &copy; NoobCoder 2021
+
                     <br>
 
                     <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
@@ -571,7 +633,7 @@ if (!doNotTrack) {
 
 
 <center>
-Jzhang已启动 <span id=span_dt_dt style="color: #0196e3;"></span>
+百年老站 拥有<span id=span_dt_dt style="color: #0196e3;"></span>历史
 <script language=javascript>
 function show_date_time(){
 	window.setTimeout("show_date_time()",1000);

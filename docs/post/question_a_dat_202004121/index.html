@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="NoobCoder">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://noobcoderr.github.io//img/go2.jpg">
+    <meta property="twitter:image" content="http://noobcoderr.github.io//img/go2.jpg" />
+    
+
+    
+    <meta name="title" content="golang如何实现并发" />
+    <meta property="og:title" content="golang如何实现并发" />
+    <meta property="twitter:title" content="golang如何实现并发" />
+    
+
+    
+    <meta name="description" content="Golang">
+    <meta property="og:description" content="Golang" />
+    <meta property="twitter:description" content="Golang" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="PaaS, Istio, Kubernetes, Microservice">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>golang如何实现并发-Hugo Blog | Golang Blog</title>
+
+    <link rel="canonical" href="/post/question_a_dat_202004121/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+	
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/syntax.css">
+    
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+    
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/docco.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146689682-1"></script>
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+
+    
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+</script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146689682-1');
+    </script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">NoobCoder</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/categories/tech">tech</a>
+                    </li>
+                    
+                    
+		            
+                        <li><a href="/top/books/">BOOKS</a></li>
+                    
+                        <li><a href="/top/about/">ABOUT</a></li>
+                    
+
+                    
+		    <li>
+                        <a href="/search">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search"></a>
+		    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/go2.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/question_a_day" title="question_a_day">
+                            question_a_day
+                        </a>
+                        
+                    </div>
+                    <h1>golang如何实现并发</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        作者  
+                        
+                            我不道啊？
+                         
+                         创建于 
+                        2020-04-12
+                        
+                        
+                        
+                        <br>
+                        <span id="busuanzi_container_page_pv">
+                          被 <span id="busuanzi_value_page_pv"></span>位智者参考过
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="golang">Golang如何实现并发？</h1>
+<h2 id="heading">头脑风暴</h2>
+<p>老生常谈，什么是并发？什么是并行？</p>
+<p>进程、线程、协程的区别，goroutine属于哪一种，为什么？</p>
+<p>为什么说golang是从语言级别实现的并发？难倒其他语言实现并发和golang有非常大 的不同？</p>
+<p>golang是如何实现语言级别的并发的？</p>
+<p>各种语言的程序是如何实现并发的？</p>
+<p>计算机是如何支持并发的？</p>
+<h2 id="heading-1">开始</h2>
+<p>首先，我们用各种编程语言编写的程序，点击运行的时候，在计算机上，其实是启动了一个进程的。</p>
+<p>比如说我们写了一个非常简单的web服务，127.0.0.1:8080 启动后，它就是一个进程。底层会起一个socket监听808端口，当我们用浏览器请求时，最后数据包都进了这个端口，进了这个端口后，怎么处理呢？这应该就是各个语言的的处理范围了。</p>
+<p>会直接让这个进程处理这个请求嘛？如果处理过程是耗时的，那么这个时候又进来许多请求怎么办？得等着呗，等上一个请求处理完，再处理后来的，所以不可能直接让主进程处理这些逻辑，那怎么办？</p>
+<p>fork一个子进程出来处理？主进程只管为到来的请求fork出一个子进程来进行处理，每来一个请求，就fork一个进行进行处理，那确实解决了多个请求到来的问题，但是进程占用资源较多，这样下去，当请求较多的时候，那么这个机器的资源就被耗尽了。(进程池，进程没有进程池，线程有)</p>
+<p>上一种方法太重量级了，那在主进程内起非常多的线程？是一个思路，一个线程占用内存大约1M，相对于进程来说，是非常轻量了。(线程的堆栈空间在windows下默认2M，linux下默认8M)</p>
+<p>随着互联网的飞速发展，后来又出现了协程，是比线程更加轻量级，像goroutine，一个只占4k(难倒不需要上下文信息嘛？应该超过4K了吧？)。</p>
+<p>他们是如何并发的呢？</p>
+<p>创建好之后，轮番进入cpu执行一定的时间片，直到任务结束。并不是一个任务一直霸占cpu直到任务结束。(切换难倒不消耗性能嘛？一个任务执行到底和轮番切换执行，哪一种收益更高？)（这里还涉及到了进程的几种状态）</p>
+<p>那CPU是如何调度的呢？这个是各自的语言相关的嘛？是属于语言去调度管理的嘛(基于用户空间，所以由开发者控制，如果是基于内核空间，则由系统控制)？</p>
+<p>一切源于C10K，现在是C100K，C1000K，</p>
+<p>现在常见的web都是IO密集，因为大多都是增删改查数据库操作，</p>
+<p>当某个方法被阻塞了，该方法所在的线程会被挂起，被操作系统的调度器放到阻塞队列，直到 A 等待的事件发生，才从阻塞态转到就绪态。（这里还涉及到了进程的几种状态）</p>
+<p>用户线程无法控制多任务并行跑在多核上，只有内核线程才可以控制使用。用户线程只能时间片轮训使用当前所在的核。</p>
+<p>多线程需要内核线程和用户线程。</p>
+<p>进程间通信，首先要明白，进程运行的时候，是个什么样的存在，为什么要和其它进程进行通信？再来思考进程间通信的其他知识点。</p>
+<p>进程运行时，是个什么存在形式，比如你一想起人，就知道有胳膊，有腿，一个脑袋，能直立行走，会说话，会蹦会跳，有名字，家住哪，等等等等。(写这些就是为了我能方便记住这些枯燥的知识点。)</p>
+<h2 id="heading-2">并发模型</h2>
+<h2 id="heading-3">参考文章</h2>
+<ul>
+<li>
+<p><a href="https://cloud.tencent.com/developer/article/1349213">并发模型比较</a></p>
+</li>
+<li>
+<p><a href="https://learnku.com/articles/32807">这些并发模型你真的懂了吗？未必</a></p>
+</li>
+<li>
+<p><a href="https://learnku.com/go/t/39490">20 张动图为你演示 Go 并发</a></p>
+</li>
+</ul>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/question_a_day_20200412/" data-toggle="tooltip" data-placement="top" title="每日一问">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/2021_05_planings/" data-toggle="tooltip" data-placement="top" title="2021年5月计划">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'c279f5088459d987985f',
+    clientSecret: '28f3f1c9515060bedff017a9bdd42ec2d3b4054c',
+    repo: 'noobcoderr.github.io',
+    owner: 'noobcoderr',
+    admin: ['noobcoderr'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost123", "127.0.0.123"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+
+            </div>
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/api" title="api">
+                            api
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/ci" title="ci">
+                            ci
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/github-page" title="github-page">
+                            github-page
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/golang" title="golang">
+                            golang
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/https" title="https">
+                            https
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/hugo" title="hugo">
+                            hugo
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/question_a_day" title="question_a_day">
+                            question_a_day
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/todo" title="todo">
+                            todo
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/travis" title="travis">
+                            travis
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E4%B8%89%E8%A7%82" title="三观">
+                            三观
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E4%B9%90%E7%90%86%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0" title="乐理入门学习">
+                            乐理入门学习
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E4%B9%A6%E5%8D%95" title="书单">
+                            书单
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%86%99%E5%8D%9A%E5%AE%A2" title="写博客">
+                            写博客
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%8F%8C%E5%90%91%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81" title="双向数字验证">
+                            双向数字验证
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%B7%A5%E4%BD%9C" title="工作">
+                            工作
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%B9%B6%E5%8F%91" title="并发">
+                            并发
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" title="操作系统">
+                            操作系统
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA" title="方法论">
+                            方法论
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E6%B1%87%E7%BC%96" title="汇编">
+                            汇编
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E7%B2%BE%E8%87%B4" title="精致">
+                            精致
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E8%A7%84%E5%88%92" title="规划">
+                            规划
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B" title="软件工程">
+                            软件工程
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E9%94%81" title="锁">
+                            锁
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92" title="项目规划">
+                            项目规划
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href=""></a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <span id="busuanzi_container_site_uv">
+                    	<center>宁来了？天字<span id="busuanzi_value_site_uv"></span>号雅座一位</center>
+					    
+					</span>
+                <ul class="list-inline text-center">
+
+                   
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="NoobCoder" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fa fa-circle fa-stack-2x"></i>
+                               <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   
+                    
+                    <li>
+                        <a href="mailto:gakky1529@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/noobcoderr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; NoobCoder 2021
+
+                    <br>
+
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                    
+                </p>
+            </div>
+            
+            <div>
+            	
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-146689682-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<center>
+百年老站 拥有<span id=span_dt_dt style="color: #0196e3;"></span>历史
+<script language=javascript>
+function show_date_time(){
+	window.setTimeout("show_date_time()",1000);
+	BirthDay=new Date("8/22/2019 00:34:58");
+
+	today= new Date();
+	
+	timeold=(today.getTime()-BirthDay.getTime());
+	sectimeold=timeold/1000
+
+	secondsold=Math.floor(sectimeold);
+	msPerDay=24*60*60*1000
+
+	e_daysold=timeold/msPerDay
+	daysold=Math.floor(e_daysold);
+	e_hrsold=(e_daysold-daysold)*24;
+
+	hrsold=Math.floor(e_hrsold);
+	e_minsold=(e_hrsold-hrsold)*60;
+	minsold=Math.floor((e_hrsold-hrsold)*60);
+	seconds=Math.floor((e_minsold-minsold)*60);
+	span_dt_dt.innerHTML=""+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+show_date_time();
+</SCRIPT>
+</center>
+
+
+
+
+</body>
+</html>
