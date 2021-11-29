@@ -1,3 +1,16 @@
+---
+title: "API设计风格之RESTful和RPC风格"
+date: 2020-05-19T23:11:43+08:00
+lastmod: 2021-11-29
+subtitle:    "适合业务的才是好风格"
+description: "待续。"
+author:      MoyuCoder
+image:       "img/theme/go1.png"
+tags:        ["规划"]
+categories:  ["Tech"]
+---
+
+
 # API设计风格之RESTful和RPC风格
 
 最近几件事让我对API的设计风格有了更多的认识。

@@ -1,4 +1,4 @@
-```
+---
 title:       "for range 原理研究"
 subtitle:    ""
 description: "值传递？？？"
@@ -7,7 +7,7 @@ author:      NoobCoder
 image:       ""
 tags:        ["工作"]
 categories:  ["Tech" ]
-```
+---
 
 
 

@@ -1,3 +1,15 @@
+---
+title: "学习计划"
+date: 2020-05-19T23:11:43+08:00
+lastmod: 2021-11-29
+subtitle:    "迟到的计划！"
+description: "计划不一定能做完，但是不计划，人就是迷茫的"
+author:      MoyuCoder
+image:       "img/theme/go1.png"
+tags:        ["规划"]
+categories:  ["Tech"]
+---
+
 # 学习计划
 
 ## 方向

@@ -1,10 +1,10 @@
-baseURL = "http://noobcoderr.github.io/"
+baseURL = "http://www.moyuto.top/"
 languageCode = "zh-CN"
 defaultContentLanguage = "zh-CN"
-theme = "cleanwhite-m"
+theme = "hugo-theme-cleanwhite-m"
 publishDir = "docs"
-baseurl = "https://github.com/noobcoderr"
-title = "NoobCoder"
+#baseurl = "http://www.moyuto.top/"
+title = "MoYuCoder"
 googleAnalytics = "UA-146689682-1"
 # 
 preserveTaxonomyNames = true
@@ -12,8 +12,8 @@ paginate = 6  #
 hasCJKLanguage = true # 
 # 这个是github.io上的博客
 
-[outputs]
-home = ["HTML", "RSS", "Algolia"]
+#[outputs]
+# home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/go2.jpg"
@@ -58,7 +58,7 @@ home = ["HTML", "RSS", "Algolia"]
   friends = true
   bookmarks = true
   about_me = true
-  enableGitalk = true
+  enableGitalk = false
 
  [params.gitalk]
    clientID = "c279f5088459d987985f"

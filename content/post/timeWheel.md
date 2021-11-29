@@ -1,3 +1,14 @@
+---
+title: "造轮子之时间轮算法的原理与实现"
+date: 2020-05-19T23:11:43+08:00
+lastmod: 2021-11-29
+subtitle:    "待补充"
+description: "待续。"
+author:      MoyuCoder
+image:       "img/theme/go1.png"
+tags:        ["规划"]
+categories:  ["Tech"]
+---
 # 造轮子之时间轮算法的原理与实现
 
 ## 背景
